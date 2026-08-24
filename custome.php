@@ -1,6 +1,4 @@
-
-
-<!DOCTYPE html>
+create like this header the same header like this i paste here same should be like this in every page  now give me header <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -326,3 +324,14 @@
     </div>
 
 </nav>
+
+
+
+
+
+
+
+
+
+
+
