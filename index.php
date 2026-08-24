@@ -852,7 +852,7 @@
                 <div class="about-image-wrapper">
 
                     <img
-                        src="images/about.jpg"
+                        src="images\quett-about-us.jpeg"
                         alt="Quetta Super Shandar Hotel"
                         class="about-image"
                     >

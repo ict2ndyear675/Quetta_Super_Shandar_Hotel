@@ -541,7 +541,7 @@
                     <div class="food-image">
 
                         <img
-                            src="images/special-chai"
+                            src="images\special-chai.webp"
                             alt="Special Chai"
                         >
 
@@ -688,7 +688,7 @@
                     <div class="food-image">
 
                         <img
-                            src="images/sulemani-kawa"
+                            src="images/sulemani-kawa.webp"
                             alt="Sulemani Kahwa"
                         >
 
@@ -734,7 +734,7 @@
                     <div class="food-image">
 
                         <img
-                            src="images/dhod-kawa"
+                            src="images/dhod-kawa.webp"
                             alt="Doodh Kahwa"
                         >
 
@@ -864,7 +864,7 @@
                     <div class="food-image">
 
                         <img
-                            src="images/sada-parata"
+                            src="images/sada-parata.webp"
                             alt="Sada Paratha"
                         >
 
@@ -1220,7 +1220,7 @@
                     <div class="food-image">
 
                         <img
-                            src="images/full-fried-anda"
+                            src="images/full-fried-anda.webp"
                             alt="Full Fried Anda"
                         >
 
