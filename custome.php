@@ -586,6 +586,831 @@ create like this header the same header like this i paste here same should be li
 
 
 
+<!-- Services Page  -->
+
+
+/* =========================================================
+   SERVICES HERO
+========================================================= */
+
+.services-hero {
+
+    position: relative;
+
+    min-height: 390px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #790016 0%,
+            #c8102e 50%,
+            #8d001c 100%
+        );
+
+    overflow: hidden;
+
+}
+
+
+.services-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+
+    height: 430px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 193, 7, 0.20);
+
+    top: -210px;
+
+    left: -130px;
+
+}
+
+
+.services-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    right: -180px;
+
+    bottom: -300px;
+
+}
+
+
+.services-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.15),
+            rgba(255, 255, 255, 0.03)
+        );
+
+}
+
+
+.services-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #ffffff;
+
+    padding: 70px 20px;
+
+}
+
+
+.services-hero-label {
+
+    display: inline-block;
+
+    color: #ffc107;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.services-hero h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+
+}
+
+
+.services-hero h1 span {
+
+    color: #ffc107;
+
+}
+
+
+.services-hero-line {
+
+    width: 65px;
+
+    height: 3px;
+
+    background: #ffc107;
+
+    margin: 0 auto 20px;
+
+}
+
+
+.services-hero p {
+
+    max-width: 680px;
+
+    margin: auto;
+
+    color: rgba(255,255,255,.90);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =========================================================
+   SERVICES INTRO
+========================================================= */
+
+.services-intro {
+
+    background: #ffffff;
+
+    padding: 75px 0 45px;
+
+}
+
+
+.services-intro .section-description {
+
+    max-width: 820px;
+
+}
+
+
+
+/* =========================================================
+   SERVICES CARDS SECTION
+========================================================= */
+
+.hotel-services-section {
+
+    background: #f8f8f8;
+
+    padding: 40px 0 90px;
+
+}
+
+
+.service-card {
+
+    position: relative;
+
+    height: 100%;
+
+    background: #ffffff;
+
+    padding: 35px 30px;
+
+    border-radius: 10px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.06);
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.service-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background: #c8102e;
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform .3s ease;
+
+}
+
+
+.service-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.12);
+
+}
+
+
+.service-card:hover::before {
+
+    transform: scaleX(1);
+
+}
+
+
+.service-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #c8102e;
+
+    color: #ffc107;
+
+    font-size: 27px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.service-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    color: #202020;
+
+    margin-bottom: 12px;
+
+}
+
+
+.service-card p {
+
+    color: #777777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin: 0;
+
+}
+
+
+.service-number {
+
+    position: absolute;
+
+    right: 22px;
+
+    bottom: 15px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 50px;
+
+    font-weight: 700;
+
+    color: rgba(200,16,46,.06);
+
+}
+
+
+
+/* =========================================================
+   WHY SERVICES SECTION
+========================================================= */
+
+.why-services {
+
+    background: #ffffff;
+
+    padding: 90px 0;
+
+}
+
+
+.services-image-wrapper {
+
+    position: relative;
+
+    padding-right: 25px;
+
+}
+
+
+.services-main-image {
+
+    width: 100%;
+
+    height: 470px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.12);
+
+}
+
+
+.services-image-badge {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 25px;
+
+    background: #c8102e;
+
+    color: #ffffff;
+
+    padding: 17px 22px;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.20);
+
+}
+
+
+.services-image-badge i {
+
+    color: #ffc107;
+
+    font-size: 27px;
+
+}
+
+
+.services-image-badge strong {
+
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 16px;
+
+}
+
+
+.services-image-badge span {
+
+    display: block;
+
+    color: rgba(255,255,255,.75);
+
+    font-size: 11px;
+
+    margin-top: 2px;
+
+}
+
+
+.why-services-content .section-label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+}
+
+
+.why-services-content h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 43px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    color: #202020;
+
+    margin-bottom: 20px;
+
+}
+
+
+.why-services-content h2 span {
+
+    display: block;
+
+    color: #c8102e;
+
+}
+
+
+.why-services-content > p {
+
+    color: #777777;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+/* =========================================================
+   SERVICE FEATURES
+========================================================= */
+
+.service-feature {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-top: 22px;
+
+}
+
+
+.service-feature-icon {
+
+    flex-shrink: 0;
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffc107;
+
+    color: #171717;
+
+    font-size: 17px;
+
+}
+
+
+.service-feature h4 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    margin: 0 0 4px;
+
+    color: #202020;
+
+}
+
+
+.service-feature p {
+
+    color: #777777;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin: 0;
+
+}
+
+
+
+/* =========================================================
+   SERVICES CTA
+========================================================= */
+
+.services-cta {
+
+    padding: 75px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7f0018,
+            #c8102e
+        );
+
+}
+
+
+.services-cta-box {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    color: #ffffff;
+
+}
+
+
+.services-cta-box > i {
+
+    width: 65px;
+
+    height: 65px;
+
+    border: 2px solid #ffc107;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    color: #ffc107;
+
+    font-size: 27px;
+
+}
+
+
+.services-cta-box h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 40px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+}
+
+
+.services-cta-box p {
+
+    max-width: 650px;
+
+    margin: 0 auto 25px;
+
+    color: rgba(255,255,255,.85);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =========================================================
+   SERVICES RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .services-hero {
+
+        min-height: 340px;
+
+    }
+
+
+    .services-hero-content {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .services-intro {
+
+        padding: 55px 20px 35px;
+
+    }
+
+
+    .hotel-services-section {
+
+        padding: 30px 0 65px;
+
+    }
+
+
+    .why-services {
+
+        padding: 65px 0;
+
+    }
+
+
+    .services-image-wrapper {
+
+        padding-right: 0;
+
+    }
+
+
+    .services-main-image {
+
+        height: 420px;
+
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .services-hero h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .services-hero p {
+
+        font-size: 13px;
+
+    }
+
+
+    .service-card {
+
+        padding: 30px 25px;
+
+    }
+
+
+    .services-main-image {
+
+        height: 350px;
+
+    }
+
+
+    .why-services-content h2 {
+
+        font-size: 35px;
+
+    }
+
+
+    .services-image-badge {
+
+        right: 15px;
+
+        bottom: 15px;
+
+    }
+
+
+    .services-cta-box h2 {
+
+        font-size: 32px;
+
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .services-hero {
+
+        min-height: 310px;
+
+    }
+
+
+    .services-hero-label {
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .services-hero h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .service-card {
+
+        padding: 27px 22px;
+
+    }
+
+
+    .service-icon {
+
+        width: 58px;
+
+        height: 58px;
+
+        font-size: 24px;
+
+    }
+
+
+    .services-main-image {
+
+        height: 300px;
+
+    }
+
+
+    .services-image-badge {
+
+        position: relative;
+
+        right: auto;
+
+        bottom: auto;
+
+        margin: -25px 20px 0;
+
+    }
+
+}
+
+
 
 
 

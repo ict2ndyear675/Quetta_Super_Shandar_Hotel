@@ -813,241 +813,6 @@ a {
 }
 
 
-/* =========================================================
-   16. SERVICES PAGE
-========================================================= */
-
-.services-hero {
-    position: relative;
-    min-height: 380px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #790016 0%,
-            #c8102e 50%,
-            #8d001c 100%
-        );
-
-    overflow: hidden;
-}
-
-.services-hero::before {
-    content: "";
-
-    position: absolute;
-
-    width: 450px;
-    height: 450px;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(255, 193, 7, 0.18);
-
-    top: -220px;
-    left: -150px;
-}
-
-.services-hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 500px;
-    height: 500px;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(255, 255, 255, 0.10);
-
-    bottom: -300px;
-    right: -150px;
-}
-
-.services-hero-content {
-    position: relative;
-    z-index: 2;
-
-    text-align: center;
-    color: var(--white);
-
-    padding: 70px 20px;
-}
-
-.services-hero-content span {
-    display: block;
-
-    color: var(--primary-yellow);
-
-    font-size: 13px;
-    font-weight: 700;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 12px;
-}
-
-.services-hero-content h1 {
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(45px, 6vw, 70px);
-
-    font-weight: 700;
-
-    margin-bottom: 15px;
-}
-
-.services-hero-content p {
-    max-width: 650px;
-    margin: auto;
-
-    color: rgba(255,255,255,.9);
-    font-size: 15px;
-}
-
-.services-section {
-    padding: 80px 0;
-    background: var(--white);
-}
-
-.services-section-light {
-    background: var(--off-white);
-}
-
-.services-heading {
-    text-align: center;
-    max-width: 750px;
-    margin: 0 auto 45px;
-}
-
-.services-heading span {
-    color: var(--primary-red);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 3px;
-}
-
-.services-heading h2 {
-    font-family: "Playfair Display", serif;
-    font-size: 42px;
-    font-weight: 700;
-    margin: 8px 0 12px;
-}
-
-.services-heading p {
-    color: var(--gray);
-    font-size: 15px;
-}
-
-.service-card {
-    height: 100%;
-
-    background: var(--white);
-
-    border: 1px solid var(--border);
-    border-radius: 12px;
-
-    padding: 32px 25px;
-
-    text-align: center;
-
-    box-shadow: var(--shadow-sm);
-
-    transition: var(--transition);
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(200,16,46,.15);
-}
-
-.service-icon {
-    width: 75px;
-    height: 75px;
-
-    margin: 0 auto 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: var(--light-yellow);
-    color: var(--primary-red);
-
-    font-size: 32px;
-
-    transition: var(--transition);
-}
-
-.service-card:hover .service-icon {
-    background: var(--primary-red);
-    color: var(--primary-yellow);
-    transform: scale(1.05);
-}
-
-.service-card h3 {
-    font-family: "Playfair Display", serif;
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.service-card p {
-    color: var(--gray);
-    font-size: 13px;
-    line-height: 1.8;
-    margin: 0;
-}
-
-.service-feature {
-    background: var(--white);
-    border-radius: 12px;
-    padding: 35px;
-
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--border);
-}
-
-.service-feature h3 {
-    font-family: "Playfair Display", serif;
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.service-feature p {
-    color: var(--gray);
-    font-size: 14px;
-}
-
-.service-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.service-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-
-    color: var(--gray);
-    font-size: 14px;
-
-    margin-bottom: 12px;
-}
-
-.service-list li i {
-    color: var(--primary-red);
-    font-size: 17px;
-    margin-top: 2px;
-}
-
 
 /* =========================================================
    17. MENU PAGE HERO
@@ -1560,12 +1325,17 @@ a {
    QUETTA SUPER SHANDAR HOTEL
 ========================================================= */
 
+/* =========================================================
+   SERVICES PAGE
+   QUETTA SUPER SHANDAR HOTEL
+========================================================= */
+
 
 /* =========================================================
    SERVICES HERO
 ========================================================= */
 
-.services-hero {
+.services-page-hero {
 
     position: relative;
 
@@ -1575,60 +1345,55 @@ a {
 
     align-items: center;
 
-    justify-content: center;
-
     background:
         linear-gradient(
-            135deg,
-            #790016 0%,
-            #c8102e 50%,
-            #8d001c 100%
-        );
+            90deg,
+            rgba(100, 0, 18, 0.96),
+            rgba(200, 16, 46, 0.86)
+        ),
+        url("../images/hotel-interior.jpg");
+
+    background-size: cover;
+
+    background-position: center;
 
     overflow: hidden;
-
 }
 
 
-.services-hero::before {
+.services-page-hero::before {
 
     content: "";
 
     position: absolute;
 
-    width: 430px;
+    width: 420px;
+    height: 420px;
 
-    height: 430px;
+    border: 1px solid rgba(255,193,7,.20);
 
     border-radius: 50%;
 
-    border: 1px solid rgba(255, 193, 7, 0.20);
-
     top: -210px;
-
-    left: -130px;
-
+    left: -150px;
 }
 
 
-.services-hero::after {
+.services-page-hero::after {
 
     content: "";
 
     position: absolute;
 
     width: 500px;
-
     height: 500px;
+
+    border: 1px solid rgba(255,255,255,.10);
 
     border-radius: 50%;
 
-    border: 1px solid rgba(255, 255, 255, 0.10);
-
-    right: -180px;
-
-    bottom: -300px;
-
+    right: -220px;
+    bottom: -330px;
 }
 
 
@@ -1641,10 +1406,9 @@ a {
     background:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.15),
-            rgba(255, 255, 255, 0.03)
+            rgba(0,0,0,.18),
+            rgba(0,0,0,.05)
         );
-
 }
 
 
@@ -1654,14 +1418,15 @@ a {
 
     z-index: 2;
 
+    max-width: 750px;
+
+    padding: 75px 0;
+
     color: #ffffff;
-
-    padding: 70px 20px;
-
 }
 
 
-.services-hero-label {
+.services-eyebrow {
 
     display: inline-block;
 
@@ -1673,30 +1438,22 @@ a {
 
     letter-spacing: 3px;
 
-    margin-bottom: 15px;
-
+    margin-bottom: 14px;
 }
 
 
-.services-hero h1 {
+.services-hero-content h1 {
 
     font-family: "Playfair Display", serif;
 
     font-size: clamp(45px, 6vw, 70px);
 
-    font-weight: 700;
-
     line-height: 1.1;
 
-    margin-bottom: 18px;
+    font-weight: 700;
 
-}
-
-
-.services-hero h1 span {
-
-    color: #ffc107;
-
+    margin: 0 0 18px;
+    color: #fffdfe;
 }
 
 
@@ -1708,16 +1465,13 @@ a {
 
     background: #ffc107;
 
-    margin: 0 auto 20px;
-
+    margin-bottom: 20px;
 }
 
 
-.services-hero p {
+.services-hero-content p {
 
-    max-width: 680px;
-
-    margin: auto;
+    max-width: 620px;
 
     color: rgba(255,255,255,.90);
 
@@ -1725,82 +1479,94 @@ a {
 
     line-height: 1.8;
 
+    margin: 0;
 }
 
 
 
 /* =========================================================
-   SERVICES INTRO
+   SERVICES INTRODUCTION
 ========================================================= */
 
-.services-intro {
-
-    background: #ffffff;
+.services-introduction {
 
     padding: 75px 0 45px;
 
+    background: #ffffff;
 }
 
 
-.services-intro .section-description {
+.services-intro-content {
 
-    max-width: 820px;
+    max-width: 850px;
 
+    margin: auto;
+}
+
+
+.services-intro-content p {
+
+    color: #777777;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin: 0 auto;
+
+    max-width: 800px;
 }
 
 
 
 /* =========================================================
-   SERVICES CARDS SECTION
+   MAIN SERVICES
 ========================================================= */
 
-.hotel-services-section {
+.hotel-services {
+
+    padding: 35px 0 90px;
 
     background: #f8f8f8;
-
-    padding: 40px 0 90px;
-
 }
 
 
-.service-card {
-
-    position: relative;
+.service-box {
 
     height: 100%;
 
-    background: #ffffff;
+    position: relative;
 
     padding: 35px 30px;
 
-    border-radius: 10px;
+    background: #ffffff;
 
     border: 1px solid #eeeeee;
 
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.06);
+    border-radius: 10px;
 
     overflow: hidden;
 
+    box-shadow:
+        0 7px 25px rgba(0,0,0,.06);
+
     transition:
         transform .3s ease,
-        box-shadow .3s ease;
-
+        box-shadow .3s ease,
+        border-color .3s ease;
 }
 
 
-.service-card::before {
+.service-box::before {
 
     content: "";
 
     position: absolute;
 
     top: 0;
-
     left: 0;
 
     width: 100%;
-
     height: 4px;
 
     background: #c8102e;
@@ -1810,40 +1576,37 @@ a {
     transform-origin: left;
 
     transition: transform .3s ease;
-
 }
 
 
-.service-card:hover {
+.service-box:hover {
 
     transform: translateY(-8px);
 
+    border-color: #f0d98a;
+
     box-shadow:
         0 18px 40px rgba(0,0,0,.12);
-
 }
 
 
-.service-card:hover::before {
+.service-box:hover::before {
 
     transform: scaleX(1);
-
 }
 
 
 .service-icon {
 
     width: 65px;
-
     height: 65px;
-
-    border-radius: 50%;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
+
+    border-radius: 50%;
 
     background: #c8102e;
 
@@ -1852,11 +1615,27 @@ a {
     font-size: 27px;
 
     margin-bottom: 22px;
-
 }
 
 
-.service-card h3 {
+.service-number {
+
+    position: absolute;
+
+    top: 22px;
+    right: 25px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    color: rgba(200,16,46,.07);
+}
+
+
+.service-box h3 {
 
     font-family: "Playfair Display", serif;
 
@@ -1867,11 +1646,10 @@ a {
     color: #202020;
 
     margin-bottom: 12px;
-
 }
 
 
-.service-card p {
+.service-box p {
 
     color: #777777;
 
@@ -1881,56 +1659,67 @@ a {
 
     margin: 0;
 
+    max-width: 330px;
 }
 
 
-.service-number {
+.service-link {
 
-    position: absolute;
+    margin-top: 20px;
 
-    right: 22px;
+    width: 35px;
+    height: 35px;
 
-    bottom: 15px;
+    display: flex;
 
-    font-family: "Playfair Display", serif;
+    align-items: center;
+    justify-content: center;
 
-    font-size: 50px;
+    border-radius: 50%;
 
-    font-weight: 700;
+    background: #fff4cc;
 
-    color: rgba(200,16,46,.06);
+    color: #c8102e;
+
+    transition: .3s ease;
+}
+
+
+.service-box:hover .service-link {
+
+    background: #c8102e;
+
+    color: #ffc107;
 
 }
 
 
 
 /* =========================================================
-   WHY SERVICES SECTION
+   EXPERIENCE SECTION
 ========================================================= */
 
-.why-services {
-
-    background: #ffffff;
+.services-experience {
 
     padding: 90px 0;
 
+    background: #ffffff;
 }
 
 
-.services-image-wrapper {
+.services-image-area {
 
     position: relative;
 
     padding-right: 25px;
-
 }
 
 
-.services-main-image {
+.services-image-area > img {
 
     width: 100%;
 
-    height: 470px;
+    height: 460px;
 
     object-fit: cover;
 
@@ -1938,11 +1727,10 @@ a {
 
     box-shadow:
         0 15px 40px rgba(0,0,0,.12);
-
 }
 
 
-.services-image-badge {
+.experience-badge {
 
     position: absolute;
 
@@ -1950,47 +1738,44 @@ a {
 
     bottom: 25px;
 
-    background: #c8102e;
-
-    color: #ffffff;
-
-    padding: 17px 22px;
-
-    border-radius: 7px;
-
     display: flex;
 
     align-items: center;
 
     gap: 12px;
 
+    padding: 16px 22px;
+
+    background: #c8102e;
+
+    color: #ffffff;
+
+    border-radius: 7px;
+
     box-shadow:
         0 8px 25px rgba(0,0,0,.20);
-
 }
 
 
-.services-image-badge i {
+.experience-badge > i {
 
     color: #ffc107;
 
-    font-size: 27px;
-
+    font-size: 24px;
 }
 
 
-.services-image-badge strong {
+.experience-badge strong {
 
     display: block;
 
     font-family: "Playfair Display", serif;
 
     font-size: 16px;
-
 }
 
 
-.services-image-badge span {
+.experience-badge small {
 
     display: block;
 
@@ -1999,20 +1784,16 @@ a {
     font-size: 11px;
 
     margin-top: 2px;
-
 }
 
 
-.why-services-content .section-label {
+.experience-content {
 
-    display: block;
-
-    margin-bottom: 8px;
-
+    padding-left: 10px;
 }
 
 
-.why-services-content h2 {
+.experience-content h2 {
 
     font-family: "Playfair Display", serif;
 
@@ -2024,21 +1805,19 @@ a {
 
     color: #202020;
 
-    margin-bottom: 20px;
-
+    margin: 8px 0 20px;
 }
 
 
-.why-services-content h2 span {
+.experience-content h2 span {
 
     display: block;
 
     color: #c8102e;
-
 }
 
 
-.why-services-content > p {
+.experience-content > p {
 
     color: #777777;
 
@@ -2046,55 +1825,50 @@ a {
 
     line-height: 1.9;
 
-    margin-bottom: 15px;
-
+    margin-bottom: 14px;
 }
 
 
 
 /* =========================================================
-   SERVICE FEATURES
+   EXPERIENCE FEATURES
 ========================================================= */
 
-.service-feature {
+.experience-feature {
 
     display: flex;
 
     align-items: flex-start;
 
-    gap: 14px;
+    gap: 13px;
 
-    margin-top: 22px;
-
+    margin-top: 20px;
 }
 
 
-.service-feature-icon {
+.experience-feature-icon {
 
     flex-shrink: 0;
 
     width: 38px;
-
     height: 38px;
-
-    border-radius: 50%;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
+
+    border-radius: 50%;
 
     background: #ffc107;
 
     color: #171717;
 
     font-size: 17px;
-
 }
 
 
-.service-feature h4 {
+.experience-feature h4 {
 
     font-family: "Playfair Display", serif;
 
@@ -2102,14 +1876,13 @@ a {
 
     font-weight: 700;
 
-    margin: 0 0 4px;
-
     color: #202020;
 
+    margin: 0 0 3px;
 }
 
 
-.service-feature p {
+.experience-feature p {
 
     color: #777777;
 
@@ -2118,90 +1891,115 @@ a {
     line-height: 1.6;
 
     margin: 0;
-
 }
 
 
 
 /* =========================================================
-   SERVICES CTA
+   SERVICES HIGHLIGHT
 ========================================================= */
 
-.services-cta {
+.services-highlight {
 
-    padding: 75px 0;
+    padding: 55px 0;
 
-    background:
-        linear-gradient(
-            135deg,
-            #7f0018,
-            #c8102e
-        );
-
+    background: #f8f8f8;
 }
 
 
-.services-cta-box {
-
-    max-width: 800px;
-
-    margin: auto;
-
-    color: #ffffff;
-
-}
-
-
-.services-cta-box > i {
-
-    width: 65px;
-
-    height: 65px;
-
-    border: 2px solid #ffc107;
-
-    border-radius: 50%;
+.services-highlight-box {
 
     display: flex;
 
     align-items: center;
 
+    gap: 25px;
+
+    padding: 32px 40px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #7f0018,
+            #c8102e
+        );
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.12);
+}
+
+
+.highlight-icon {
+
+    flex-shrink: 0;
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
     justify-content: center;
 
-    margin: 0 auto 20px;
+    border: 2px solid #ffc107;
+
+    border-radius: 50%;
 
     color: #ffc107;
 
-    font-size: 27px;
-
+    font-size: 26px;
 }
 
 
-.services-cta-box h2 {
+.highlight-content {
 
-    font-family: "Playfair Display", serif;
+    flex: 1;
+}
 
-    font-size: 40px;
+
+.highlight-content span {
+
+    display: block;
+
+    color: #ffc107;
+
+    font-size: 11px;
 
     font-weight: 700;
 
-    margin-bottom: 12px;
+    letter-spacing: 2px;
 
+    margin-bottom: 4px;
 }
 
 
-.services-cta-box p {
+.highlight-content h2 {
 
-    max-width: 650px;
+    font-family: "Playfair Display", serif;
 
-    margin: 0 auto 25px;
+    font-size: 28px;
 
-    color: rgba(255,255,255,.85);
+    margin: 0 0 5px;
+}
 
-    font-size: 14px;
 
-    line-height: 1.8;
+.highlight-content p {
 
+    color: rgba(255,255,255,.82);
+
+    font-size: 13px;
+
+    margin: 0;
+}
+
+
+.highlight-button {
+
+    flex-shrink: 0;
 }
 
 
@@ -2212,52 +2010,51 @@ a {
 
 @media (max-width: 991px) {
 
-    .services-hero {
+    .services-page-hero {
 
-        min-height: 340px;
-
+        min-height: 350px;
     }
 
 
     .services-hero-content {
 
-        padding: 60px 20px;
-
+        padding: 65px 20px;
     }
 
 
-    .services-intro {
+    .services-introduction {
 
-        padding: 55px 20px 35px;
-
+        padding: 60px 20px 35px;
     }
 
 
-    .hotel-services-section {
+    .hotel-services {
 
         padding: 30px 0 65px;
-
     }
 
 
-    .why-services {
+    .services-experience {
 
         padding: 65px 0;
-
     }
 
 
-    .services-image-wrapper {
+    .services-image-area {
 
         padding-right: 0;
-
     }
 
 
-    .services-main-image {
+    .experience-content {
 
-        height: 420px;
+        padding-left: 0;
+    }
 
+
+    .services-highlight-box {
+
+        margin: 0 15px;
     }
 
 }
@@ -2265,54 +2062,78 @@ a {
 
 @media (max-width: 767px) {
 
-    .services-hero h1 {
+    .services-page-hero {
 
-        font-size: 45px;
-
+        min-height: 320px;
     }
 
 
-    .services-hero p {
+    .services-hero-content {
+
+        text-align: center;
+
+        margin: auto;
+    }
+
+
+    .services-hero-line {
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .services-hero-content p {
 
         font-size: 13px;
-
     }
 
 
-    .service-card {
+    .service-box {
 
         padding: 30px 25px;
-
     }
 
 
-    .services-main-image {
+    .services-image-area > img {
 
-        height: 350px;
-
+        height: 360px;
     }
 
 
-    .why-services-content h2 {
-
-        font-size: 35px;
-
-    }
-
-
-    .services-image-badge {
+    .experience-badge {
 
         right: 15px;
 
         bottom: 15px;
-
     }
 
 
-    .services-cta-box h2 {
+    .experience-content h2 {
 
-        font-size: 32px;
+        font-size: 35px;
+    }
 
+
+    .services-highlight-box {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 35px 25px;
+    }
+
+
+    .highlight-button {
+
+        width: 100%;
+    }
+
+
+    .highlight-button .btn {
+
+        width: 100%;
     }
 
 }
@@ -2320,64 +2141,62 @@ a {
 
 @media (max-width: 575px) {
 
-    .services-hero {
+    .services-page-hero {
 
-        min-height: 310px;
-
+        min-height: 300px;
     }
 
 
-    .services-hero-label {
+    .services-eyebrow {
 
-        font-size: 11px;
+        font-size: 10px;
 
         letter-spacing: 2px;
-
     }
 
 
-    .services-hero h1 {
+    .services-hero-content h1 {
 
         font-size: 38px;
-
+        color:red;
     }
 
 
-    .service-card {
+    .services-introduction {
 
-        padding: 27px 22px;
-
+        padding-top: 50px;
     }
 
 
     .service-icon {
 
         width: 58px;
-
         height: 58px;
 
         font-size: 24px;
-
     }
 
 
-    .services-main-image {
+    .services-image-area > img {
 
         height: 300px;
-
     }
 
 
-    .services-image-badge {
+    .experience-badge {
 
         position: relative;
 
         right: auto;
-
         bottom: auto;
 
         margin: -25px 20px 0;
+    }
 
+
+    .experience-content h2 {
+
+        font-size: 32px;
     }
 
 }
