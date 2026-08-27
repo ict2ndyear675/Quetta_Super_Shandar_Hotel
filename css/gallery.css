@@ -1,0 +1,943 @@
+/* =====================================================
+   QUETTA SUPER SHANDAR HOTEL
+   GALLERY PAGE
+   CLEAN PROFESSIONAL DESIGN
+===================================================== */
+
+
+/* =====================================================
+   GALLERY HERO
+===================================================== */
+
+.qsh-gallery-hero {
+
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8d001d 0%,
+            #c8102e 55%,
+            #a40021 100%
+        );
+
+    overflow: hidden;
+
+}
+
+
+/* Decorative circle */
+
+.qsh-gallery-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border: 1px solid rgba(255, 193, 7, 0.25);
+
+    border-radius: 50%;
+
+    top: -280px;
+    left: -150px;
+
+}
+
+
+/* Decorative circle */
+
+.qsh-gallery-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 50%;
+
+    bottom: -390px;
+    right: -180px;
+
+}
+
+
+/* Hero overlay */
+
+.qsh-gallery-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.12),
+            rgba(255, 255, 255, 0.03)
+        );
+
+}
+
+
+/* Hero content */
+
+.qsh-gallery-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 80px 20px;
+
+    color: #ffffff;
+
+}
+
+
+/* Small label */
+
+.qsh-gallery-label {
+
+    display: block;
+
+    color: #ffc107;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Main heading */
+
+.qsh-gallery-hero h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 6vw, 76px);
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    margin: 0 0 20px;
+
+    color: #ffffff;
+
+}
+
+
+/* Yellow heading part */
+
+.qsh-gallery-hero h1 span {
+
+    color: #ffc107;
+
+}
+
+
+/* Gold line */
+
+.qsh-gallery-gold-line {
+
+    width: 70px;
+
+    height: 3px;
+
+    background: #ffc107;
+
+    margin: 0 auto 22px;
+
+}
+
+
+/* Hero paragraph */
+
+.qsh-gallery-hero p {
+
+    max-width: 720px;
+
+    margin: auto;
+
+    color: rgba(255, 255, 255, 0.92);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   GALLERY INTRO
+===================================================== */
+
+.qsh-gallery-intro {
+
+    padding: 85px 0 75px;
+
+    background: #ffffff;
+
+    text-align: center;
+
+}
+
+
+.qsh-gallery-intro-content {
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+
+.qsh-section-label {
+
+    display: block;
+
+    color: #c8102e;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.qsh-gallery-intro h2 {
+
+    font-family: "Playfair Display", serif;
+
+    color: #171717;
+
+    font-size: 46px;
+
+    line-height: 1.2;
+
+    margin: 0 0 15px;
+
+}
+
+
+/* Heading decoration */
+
+.qsh-heading-line {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.qsh-heading-line span {
+
+    width: 45px;
+
+    height: 2px;
+
+    background: #ffc107;
+
+}
+
+
+.qsh-heading-line i {
+
+    color: #c8102e;
+
+    font-size: 14px;
+
+}
+
+
+.qsh-gallery-intro p {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    color: #666666;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =====================================================
+   GALLERY CATEGORY
+===================================================== */
+
+.qsh-gallery-category {
+
+    padding: 85px 0;
+
+    background: #ffffff;
+
+}
+
+
+.qsh-gallery-category-light {
+
+    background: #f7f7f7;
+
+}
+
+
+/* =====================================================
+   CATEGORY HEADING
+===================================================== */
+
+.qsh-category-heading {
+
+    max-width: 850px;
+
+    margin: 0 auto 42px;
+
+}
+
+
+.qsh-category-heading > span {
+
+    display: block;
+
+    color: #c8102e;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.qsh-category-heading h2 {
+
+    font-family: "Playfair Display", serif;
+
+    color: #171717;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    margin: 0 0 10px;
+
+}
+
+
+.qsh-category-heading p {
+
+    color: #666666;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin: 0;
+
+}
+
+
+/* =====================================================
+   GALLERY GRID
+===================================================== */
+
+.qsh-gallery-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* =====================================================
+   GALLERY CARD
+===================================================== */
+
+.qsh-gallery-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.qsh-gallery-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =====================================================
+   GALLERY IMAGE
+===================================================== */
+
+.qsh-gallery-image {
+
+    position: relative;
+
+    height: 330px;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+
+}
+
+
+/* Actual image */
+
+.qsh-gallery-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+
+}
+
+
+/* Zoom on hover */
+
+.qsh-gallery-card:hover .qsh-gallery-image img {
+
+    transform: scale(1.07);
+
+}
+
+
+/* =====================================================
+   IMAGE DARK GRADIENT
+===================================================== */
+
+.qsh-gallery-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.78) 0%,
+            rgba(0, 0, 0, 0.15) 45%,
+            rgba(0, 0, 0, 0) 75%
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   IMAGE CAPTION
+===================================================== */
+
+.qsh-image-caption {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    z-index: 2;
+
+    padding: 25px 22px 20px;
+
+    color: #ffffff;
+
+}
+
+
+.qsh-image-caption span {
+
+    display: block;
+
+    color: #ffc107;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+
+}
+
+
+.qsh-image-caption h3 {
+
+    color: #ffffff;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    margin: 0;
+
+}
+
+
+/* =====================================================
+   GALLERY MESSAGE
+===================================================== */
+
+.qsh-gallery-message {
+
+    position: relative;
+
+    padding: 90px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7f0018,
+            #c8102e
+        );
+
+    color: #ffffff;
+
+    text-align: center;
+
+    overflow: hidden;
+
+}
+
+
+/* Decorative circle */
+
+.qsh-gallery-message::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border: 1px solid rgba(255, 193, 7, 0.18);
+
+    border-radius: 50%;
+
+    top: -280px;
+
+    right: -100px;
+
+}
+
+
+.qsh-message-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+
+.qsh-message-content > span {
+
+    display: block;
+
+    color: #ffc107;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.qsh-message-content h2 {
+
+    font-family: "Playfair Display", serif;
+
+    color: #ffffff;
+
+    font-size: 42px;
+
+    margin: 0 0 15px;
+
+}
+
+
+.qsh-message-content p {
+
+    max-width: 650px;
+
+    margin: 0 auto 28px;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   GALLERY BUTTON
+===================================================== */
+
+.qsh-gallery-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 13px 25px;
+
+    background: #ffc107;
+
+    color: #171717;
+
+    border: 2px solid #ffc107;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.qsh-gallery-button:hover {
+
+    background: #ffffff;
+
+    border-color: #ffffff;
+
+    color: #171717;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .qsh-gallery-hero {
+
+        min-height: 460px;
+
+    }
+
+
+    .qsh-gallery-hero-content {
+
+        padding: 70px 20px;
+
+    }
+
+
+    .qsh-gallery-category {
+
+        padding: 70px 0;
+
+    }
+
+
+    .qsh-gallery-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .qsh-gallery-image {
+
+        height: 300px;
+
+    }
+
+
+    .qsh-gallery-intro {
+
+        padding: 70px 20px 60px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .qsh-gallery-hero {
+
+        min-height: 420px;
+
+    }
+
+
+    .qsh-gallery-label {
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .qsh-gallery-hero h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .qsh-gallery-hero p {
+
+        font-size: 14px;
+
+    }
+
+
+    .qsh-gallery-intro {
+
+        padding: 60px 20px 50px;
+
+    }
+
+
+    .qsh-gallery-intro h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .qsh-gallery-category {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .qsh-category-heading {
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .qsh-category-heading h2 {
+
+        font-size: 34px;
+
+    }
+
+
+    .qsh-category-heading p {
+
+        font-size: 14px;
+
+    }
+
+
+    .qsh-gallery-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .qsh-gallery-image {
+
+        height: 300px;
+
+    }
+
+
+    .qsh-gallery-message {
+
+        padding: 70px 20px;
+
+    }
+
+
+    .qsh-message-content h2 {
+
+        font-size: 34px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .qsh-gallery-hero {
+
+        min-height: 390px;
+
+    }
+
+
+    .qsh-gallery-hero-content {
+
+        padding: 60px 15px;
+
+    }
+
+
+    .qsh-gallery-hero h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .qsh-gallery-intro h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .qsh-category-heading h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .qsh-gallery-image {
+
+        height: 250px;
+
+    }
+
+
+    .qsh-image-caption {
+
+        padding: 20px 18px 16px;
+
+    }
+
+
+    .qsh-image-caption h3 {
+
+        font-size: 19px;
+
+    }
+
+
+    .qsh-message-content h2 {
+
+        font-size: 30px;
+
+    }
+
+}
