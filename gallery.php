@@ -1,67 +1,83 @@
-<?php
-include 'includes/header.php';
-?>
+<?php include 'includes/header.php'; ?>
 
-<!-- =========================================================
-     GALLERY HERO
-========================================================= -->
 
-<section class="gallery-hero">
 
-    <div class="gallery-hero-overlay"></div>
+<link rel="stylesheet" href="css/gallery.css">
 
-    <div class="container">
+<!-- =====================================================
+     QUETTA SUPER SHANDAR HOTEL
+     GALLERY PAGE
+===================================================== -->
 
-        <div class="gallery-hero-content text-center">
+<main class="qsh-gallery-page">
 
-            <span class="gallery-hero-label">
-                QUETTA SUPER SHANDAR HOTEL
-            </span>
+    <!-- =================================================
+         GALLERY HERO
+    ================================================== -->
 
-            <h1>
-                Our Gallery
-            </h1>
+    <section class="qsh-gallery-hero">
 
-            <div class="gallery-hero-line"></div>
+        <div class="qsh-gallery-hero-overlay"></div>
 
-            <p>
-                Explore the food, atmosphere and traditional hospitality
-                that make Quetta Super Shandar Hotel a special place to visit.
-            </p>
+        <div class="container">
+
+            <div class="qsh-gallery-hero-content">
+
+                <span class="qsh-gallery-label">
+                    A GLIMPSE OF OUR HOTEL
+                </span>
+
+                <h1>
+                    Experience Quetta<br>
+                    <span>Super Shandar</span>
+                </h1>
+
+                <div class="qsh-gallery-gold-line"></div>
+
+                <p>
+                    Explore the food, atmosphere and memorable moments
+                    that make Quetta Super Shandar Hotel a welcoming
+                    place for everyone.
+                </p>
+
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================================================
-     GALLERY INTRO
-========================================================= -->
+    <!-- =================================================
+         GALLERY INTRODUCTION
+    ================================================== -->
 
-<section class="gallery-intro">
+    <section class="qsh-gallery-intro">
 
-    <div class="container text-center">
+        <div class="container">
 
-        <span class="section-label">
-            A GLIMPSE OF OUR HOTEL
-        </span>
+            <div class="qsh-gallery-intro-content">
 
-        <h2 class="gallery-section-title">
-            Moments & Flavors
-        </h2>
+                <span class="qsh-section-label">
+                    OUR GALLERY
+                </span>
 
-        <div class="gallery-gold-line"></div>
+                <h2>
+                    Moments &amp; Flavors
+                </h2>
 
-        <p class="gallery-intro-text">
-            Take a look at our traditional food, freshly prepared
-            breakfast, famous Quetta-style chai and the welcoming
-            atmosphere of Quetta Super Shandar Hotel.
-        </p>
+                <div class="qsh-heading-line">
+                    <span></span>
+                    <i class="fas fa-star"></i>
+                    <span></span>
+                </div>
 
-    </div>
+                <p>
+                    Take a look at our traditional food, freshly prepared
+                    breakfasts, famous Quetta-style chai and the warm
+                    atmosphere of Quetta Super Shandar Hotel.
+                </p>
 
+<<<<<<< HEAD
 </section>
 
 
@@ -114,48 +130,92 @@ include 'includes/header.php';
             >
                 Breakfast & Paratha
             </button>
+=======
+            </div>
+>>>>>>> 604ec93a70d20ae8e0c7be0e20b80199a44c26d0
 
         </div>
 
-
-        <!-- =====================================================
-             GALLERY GRID
-        ===================================================== -->
-
-        <div class="gallery-grid">
+    </section>
 
 
-            <!-- =================================================
-                 HOTEL & ATMOSPHERE
-            ================================================= -->
+    <!-- =================================================
+         HOTEL & ATMOSPHERE
+    ================================================== -->
 
-            <div
-                class="gallery-item gallery-large"
-                data-category="hotel"
-            >
+    <section class="qsh-gallery-category">
 
-                <div class="gallery-card">
+        <div class="container">
 
-                    <img
-                        src="images/hero-hotel.jpg"
-                        alt="Quetta Super Shandar Hotel"
-                        loading="lazy"
-                    >
+            <div class="qsh-category-heading">
 
-                    <div class="gallery-overlay">
+                <span>01 • HOTEL &amp; ATMOSPHERE</span>
 
-                        <div class="gallery-overlay-content">
+                <h2>Our Hotel</h2>
 
-                            <span>
-                                HOTEL & ATMOSPHERE
-                            </span>
+                <p>
+                    A simple and welcoming atmosphere where guests can
+                    enjoy good food and comfortable moments.
+                </p>
 
-                            <h3>
-                                Welcome to Quetta Super Shandar
-                            </h3>
+            </div>
 
-                            <i class="bi bi-plus-lg"></i>
 
+            <div class="qsh-gallery-grid">
+
+                <!-- Image 1 -->
+                <div class="qsh-gallery-card">
+
+                    <div class="qsh-gallery-image">
+
+                        <img
+                            src="images/hero-hotel.jpg"
+                            alt="Quetta Super Shandar Hotel exterior"
+                        >
+
+                        <div class="qsh-image-caption">
+                            <span>Hotel &amp; Atmosphere</span>
+                            <h3>Quetta Super Shandar Hotel</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Image 2 -->
+                <div class="qsh-gallery-card">
+
+                    <div class="qsh-gallery-image">
+
+                        <img
+                            src="images/hotel-night.jpg"
+                            alt="Quetta Super Shandar Hotel at night"
+                        >
+
+                        <div class="qsh-image-caption">
+                            <span>Hotel &amp; Atmosphere</span>
+                            <h3>Our Hotel at Night</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Image 3 -->
+                <div class="qsh-gallery-card">
+
+                    <div class="qsh-gallery-image">
+
+                        <img
+                            src="images/hospitality.jpg"
+                            alt="Warm hospitality at Quetta Super Shandar Hotel"
+                        >
+
+                        <div class="qsh-image-caption">
+                            <span>Hospitality</span>
+                            <h3>A Welcoming Place</h3>
                         </div>
 
                     </div>
@@ -163,1128 +223,319 @@ include 'includes/header.php';
                 </div>
 
             </div>
-
-
-            <div
-                class="gallery-item"
-                data-category="hotel"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/hotel-night.jpg"
-                        alt="Hotel at Night"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                HOTEL & ATMOSPHERE
-                            </span>
-
-                            <h3>
-                                Hotel at Night
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item"
-                data-category="hotel"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/hospitality.jpg"
-                        alt="Hotel Hospitality"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                HOSPITALITY
-                            </span>
-
-                            <h3>
-                                Warm Quetta Hospitality
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item gallery-wide"
-                data-category="hotel"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/food-table.jpg"
-                        alt="Hotel Dining Table"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                DINING
-                            </span>
-
-                            <h3>
-                                Traditional Dining Experience
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- =================================================
-                 TRADITIONAL FOOD
-            ================================================= -->
-
-            <div
-                class="gallery-item gallery-large"
-                data-category="food"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/sajji-platter.jpg"
-                        alt="Traditional Quetta Sajji Platter"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                TRADITIONAL FOOD
-                            </span>
-
-                            <h3>
-                                Quetta Sajji Platter
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item"
-                data-category="food"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/quetta-mutton-karahi.jpg"
-                        alt="Quetta Mutton Karahi"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                TRADITIONAL FOOD
-                            </span>
-
-                            <h3>
-                                Mutton Karahi
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item"
-                data-category="food"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/chiken-karahi.jpg"
-                        alt="Chicken Karahi"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                TRADITIONAL FOOD
-                            </span>
-
-                            <h3>
-                                Chicken Karahi
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item"
-                data-category="food"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/chicken-qourma.jpg"
-                        alt="Chicken Qorma"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                TRADITIONAL FOOD
-                            </span>
-
-                            <h3>
-                                Chicken Qorma
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item gallery-wide"
-                data-category="food"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/karachi-biryani.jpg"
-                        alt="Karachi Biryani"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                TRADITIONAL FOOD
-                            </span>
-
-                            <h3>
-                                Karachi Biryani
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item"
-                data-category="food"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/alo-kima.jpg"
-                        alt="Aloo Qeema"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                TRADITIONAL FOOD
-                            </span>
-
-                            <h3>
-                                Aloo Qeema
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- =================================================
-                 CHAI & KAHWA
-            ================================================= -->
-
-            <div
-                class="gallery-item gallery-large"
-                data-category="chai"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/special-chai.webp"
-                        alt="Special Quetta Chai"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                CHAI & KAHWA
-                            </span>
-
-                            <h3>
-                                Special Quetta Chai
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item"
-                data-category="chai"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/special-mlahi-wala-chai.webp"
-                        alt="Special Malai Wali Chai"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                CHAI & KAHWA
-                            </span>
-
-                            <h3>
-                                Special Malai Wali Chai
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item"
-                data-category="chai"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/special-gurhwali-chai.webp"
-                        alt="Special Gur Wali Chai"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                CHAI & KAHWA
-                            </span>
-
-                            <h3>
-                                Special Gur Wali Chai
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item"
-                data-category="chai"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/sulemani-kawa.webp"
-                        alt="Sulemani Kahwa"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                CHAI & KAHWA
-                            </span>
-
-                            <h3>
-                                Sulemani Kahwa
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item gallery-wide"
-                data-category="chai"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/dhod-kawa.webp"
-                        alt="Doodh Kahwa"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                CHAI & KAHWA
-                            </span>
-
-                            <h3>
-                                Doodh Kahwa
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- =================================================
-                 BREAKFAST & PARATHA
-            ================================================= -->
-
-            <div
-                class="gallery-item gallery-large"
-                data-category="breakfast"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/lacha-parata.webp"
-                        alt="Lachha Paratha"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                BREAKFAST
-                            </span>
-
-                            <h3>
-                                Fresh Lachha Paratha
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item"
-                data-category="breakfast"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/alo-parata.webp"
-                        alt="Aloo Paratha"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                BREAKFAST
-                            </span>
-
-                            <h3>
-                                Aloo Paratha
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item"
-                data-category="breakfast"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/aloo-cheeze-parata.webp"
-                        alt="Aloo Cheese Paratha"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                BREAKFAST
-                            </span>
-
-                            <h3>
-                                Aloo Cheese Paratha
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item"
-                data-category="breakfast"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/anda-omelette.webp"
-                        alt="Anda Omelette"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                BREAKFAST
-                            </span>
-
-                            <h3>
-                                Fresh Anda Omelette
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="gallery-item gallery-wide"
-                data-category="breakfast"
-            >
-
-                <div class="gallery-card">
-
-                    <img
-                        src="images/sada-parata.webp"
-                        alt="Sada Paratha"
-                        loading="lazy"
-                    >
-
-                    <div class="gallery-overlay">
-
-                        <div class="gallery-overlay-content">
-
-                            <span>
-                                BREAKFAST
-                            </span>
-
-                            <h3>
-                                Traditional Sada Paratha
-                            </h3>
-
-                            <i class="bi bi-plus-lg"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================================================
-     GALLERY CTA
-========================================================= -->
+    <!-- =================================================
+         TRADITIONAL FOOD
+    ================================================== -->
 
-<section class="gallery-cta">
+    <section class="qsh-gallery-category qsh-gallery-category-light">
 
-    <div class="gallery-cta-overlay"></div>
+        <div class="container">
 
-    <div class="container">
+            <div class="qsh-category-heading">
 
-        <div class="gallery-cta-content text-center">
+                <span>02 • TRADITIONAL FOOD</span>
 
-            <span>
-                EXPERIENCE IT YOURSELF
-            </span>
+                <h2>Traditional Flavors</h2>
 
-            <h2>
-                Taste the Real Flavor of Quetta
-            </h2>
+                <p>
+                    Freshly prepared dishes inspired by the traditional
+                    flavors enjoyed in Quetta.
+                </p>
 
-            <p>
-                Fresh traditional food, warm hospitality and
-                a comfortable place to enjoy your time.
-            </p>
+            </div>
 
-            <a
-                href="menu.php"
-                class="btn gallery-menu-btn"
-            >
-                Explore Our Menu
-                <i class="bi bi-arrow-right"></i>
-            </a>
 
-            <a
-                href="contact.php"
-                class="btn gallery-contact-btn"
-            >
-                Contact Us
-            </a>
+            <div class="qsh-gallery-grid">
+
+                <!-- Image 1 -->
+                <div class="qsh-gallery-card">
+
+                    <div class="qsh-gallery-image">
+
+                        <img
+                            src="images/quetta-mutton-karahi.jpg"
+                            alt="Quetta Mutton Karahi"
+                        >
+
+                        <div class="qsh-image-caption">
+                            <span>Traditional Food</span>
+                            <h3>Mutton Karahi</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Image 2 -->
+                <div class="qsh-gallery-card">
+
+                    <div class="qsh-gallery-image">
+
+                        <img
+                            src="images/sajji-platter.jpg"
+                            alt="Traditional Sajji platter"
+                        >
+
+                        <div class="qsh-image-caption">
+                            <span>Traditional Food</span>
+                            <h3>Sajji Platter</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Image 3 -->
+                <div class="qsh-gallery-card">
+
+                    <div class="qsh-gallery-image">
+
+                        <img
+                            src="images/chicken-qourma.jpg"
+                            alt="Chicken Qourma"
+                        >
+
+                        <div class="qsh-image-caption">
+                            <span>Traditional Food</span>
+                            <h3>Chicken Qourma</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
 
+    <!-- =================================================
+         BREAKFAST & PARATHA
+    ================================================== -->
 
-<!-- =========================================================
-     IMAGE LIGHTBOX
-========================================================= -->
+    <section class="qsh-gallery-category">
 
-<div
-    class="gallery-lightbox"
-    id="galleryLightbox"
->
+        <div class="container">
 
-    <button
-        class="lightbox-close"
-        type="button"
-        aria-label="Close image"
-    >
-        <i class="bi bi-x-lg"></i>
-    </button>
+            <div class="qsh-category-heading">
 
-    <button
-        class="lightbox-prev"
-        type="button"
-        aria-label="Previous image"
-    >
-        <i class="bi bi-chevron-left"></i>
-    </button>
+                <span>03 • BREAKFAST &amp; PARATHA</span>
 
-    <img
-        id="lightboxImage"
-        src=""
-        alt=""
-    >
+                <h2>Fresh Breakfast</h2>
 
-    <button
-        class="lightbox-next"
-        type="button"
-        aria-label="Next image"
-    >
-        <i class="bi bi-chevron-right"></i>
-    </button>
+                <p>
+                    Start your day with freshly prepared breakfast,
+                    traditional parathas and simple local favorites.
+                </p>
 
-    <div
-        class="lightbox-caption"
-        id="lightboxCaption"
-    ></div>
+            </div>
 
-</div>
 
+            <div class="qsh-gallery-grid">
 
-<!-- =========================================================
-     GALLERY JAVASCRIPT
-========================================================= -->
+                <!-- Image 1 -->
+                <div class="qsh-gallery-card">
 
-<script>
+                    <div class="qsh-gallery-image">
 
-document.addEventListener("DOMContentLoaded", function () {
+                        <img
+                            src="images/anda-omelette.webp"
+                            alt="Anda Omelette breakfast"
+                        >
 
-    const filterButtons =
-        document.querySelectorAll(".gallery-filter-btn");
+                        <div class="qsh-image-caption">
+                            <span>Breakfast</span>
+                            <h3>Anda Omelette</h3>
+                        </div>
 
-    const galleryItems =
-        document.querySelectorAll(".gallery-item");
+                    </div>
 
+                </div>
 
-    /* =====================================================
-       FILTER
-    ===================================================== */
 
-    filterButtons.forEach(function (button) {
+                <!-- Image 2 -->
+                <div class="qsh-gallery-card">
 
-        button.addEventListener("click", function () {
+                    <div class="qsh-gallery-image">
 
-            const filter =
-                this.getAttribute("data-filter");
+                        <img
+                            src="images/lacha-parata.webp"
+                            alt="Lacha Paratha"
+                        >
 
+                        <div class="qsh-image-caption">
+                            <span>Breakfast</span>
+                            <h3>Lacha Paratha</h3>
+                        </div>
 
-            filterButtons.forEach(function (btn) {
+                    </div>
 
-                btn.classList.remove("active");
+                </div>
 
-            });
 
+                <!-- Image 3 -->
+                <div class="qsh-gallery-card">
 
-            this.classList.add("active");
+                    <div class="qsh-gallery-image">
 
+                        <img
+                            src="images/sada-parata.webp"
+                            alt="Traditional Sada Paratha"
+                        >
 
-            galleryItems.forEach(function (item) {
+                        <div class="qsh-image-caption">
+                            <span>Breakfast</span>
+                            <h3>Sada Paratha</h3>
+                        </div>
 
-                const category =
-                    item.getAttribute("data-category");
+                    </div>
 
+                </div>
 
-                if (
-                    filter === "all" ||
-                    category === filter
-                ) {
+            </div>
 
-                    item.classList.remove("gallery-hidden");
+        </div>
 
-                } else {
+    </section>
 
-                    item.classList.add("gallery-hidden");
 
-                }
+    <!-- =================================================
+         CHAI & KAHWA
+    ================================================== -->
 
-            });
+    <section class="qsh-gallery-category qsh-gallery-category-light">
 
-        });
+        <div class="container">
 
-    });
+            <div class="qsh-category-heading">
 
+                <span>04 • CHAI &amp; KAHWA</span>
 
+                <h2>Quetta Chai &amp; Kahwa</h2>
 
-    /* =====================================================
-       LIGHTBOX
-    ===================================================== */
+                <p>
+                    Enjoy the warm taste of traditional chai and
+                    refreshing kahwa, an important part of Quetta's
+                    food culture.
+                </p>
 
-    const lightbox =
-        document.getElementById("galleryLightbox");
+            </div>
 
-    const lightboxImage =
-        document.getElementById("lightboxImage");
 
-    const lightboxCaption =
-        document.getElementById("lightboxCaption");
+            <div class="qsh-gallery-grid">
 
-    const closeButton =
-        document.querySelector(".lightbox-close");
+                <!-- Image 1 -->
+                <div class="qsh-gallery-card">
 
-    const previousButton =
-        document.querySelector(".lightbox-prev");
+                    <div class="qsh-gallery-image">
 
-    const nextButton =
-        document.querySelector(".lightbox-next");
+                        <img
+                            src="images/quetta-tea-brew.webp"
+                            alt="Quetta tea"
+                        >
 
+                        <div class="qsh-image-caption">
+                            <span>Chai &amp; Kahwa</span>
+                            <h3>Quetta Tea</h3>
+                        </div>
 
-    let currentIndex = 0;
+                    </div>
 
+                </div>
 
-    function getVisibleImages() {
 
-        return Array.from(
-            document.querySelectorAll(
-                ".gallery-item:not(.gallery-hidden) .gallery-card img"
-            )
-        );
+                <!-- Image 2 -->
+                <div class="qsh-gallery-card">
 
-    }
+                    <div class="qsh-gallery-image">
 
+                        <img
+                            src="images/sulemani-kawa.webp"
+                            alt="Sulemani Kahwa"
+                        >
 
-    function openLightbox(index) {
+                        <div class="qsh-image-caption">
+                            <span>Chai &amp; Kahwa</span>
+                            <h3>Sulemani Kahwa</h3>
+                        </div>
 
-        const images =
-            getVisibleImages();
+                    </div>
 
+                </div>
 
-        if (!images.length) {
-            return;
-        }
 
+                <!-- Image 3 -->
+                <div class="qsh-gallery-card">
 
-        currentIndex = index;
+                    <div class="qsh-gallery-image">
 
+                        <img
+                            src="images/special-chai.webp"
+                            alt="Special Quetta chai"
+                        >
 
-        const image =
-            images[currentIndex];
+                        <div class="qsh-image-caption">
+                            <span>Chai &amp; Kahwa</span>
+                            <h3>Special Chai</h3>
+                        </div>
 
+                    </div>
 
-        lightboxImage.src =
-            image.src;
+                </div>
 
+            </div>
 
-        lightboxImage.alt =
-            image.alt;
+        </div>
 
+    </section>
 
-        lightboxCaption.textContent =
-            image.alt;
 
+    <!-- =================================================
+         GALLERY CLOSING MESSAGE
+    ================================================== -->
 
-        lightbox.classList.add("show");
+    <section class="qsh-gallery-message">
 
+        <div class="container">
 
-        document.body.classList.add(
-            "lightbox-open"
-        );
+            <div class="qsh-message-content">
 
-    }
+                <span>
+                    GOOD FOOD • WARM HOSPITALITY • QUETTA
+                </span>
 
+                <h2>
+                    Come and Experience It Yourself
+                </h2>
 
-    function closeLightbox() {
+                <p>
+                    Visit Quetta Super Shandar Hotel and enjoy
+                    traditional flavors in a comfortable and
+                    welcoming atmosphere.
+                </p>
 
-        lightbox.classList.remove("show");
+                <a href="menu.php" class="qsh-gallery-button">
+                    Explore Our Menu
+                    <i class="fas fa-arrow-right"></i>
+                </a>
 
-        document.body.classList.remove(
-            "lightbox-open"
-        );
+            </div>
 
-    }
+        </div>
 
+    </section>
 
-    function showNextImage() {
+</main>
 
-        const images =
-            getVisibleImages();
 
-
-        if (!images.length) {
-            return;
-        }
-
-
-        currentIndex =
-            (currentIndex + 1) % images.length;
-
-
-        const image =
-            images[currentIndex];
-
-
-        lightboxImage.src =
-            image.src;
-
-
-        lightboxImage.alt =
-            image.alt;
-
-
-        lightboxCaption.textContent =
-            image.alt;
-
-    }
-
-
-    function showPreviousImage() {
-
-        const images =
-            getVisibleImages();
-
-
-        if (!images.length) {
-            return;
-        }
-
-
-        currentIndex =
-            (
-                currentIndex -
-                1 +
-                images.length
-            ) % images.length;
-
-
-        const image =
-            images[currentIndex];
-
-
-        lightboxImage.src =
-            image.src;
-
-
-        lightboxImage.alt =
-            image.alt;
-
-
-        lightboxCaption.textContent =
-            image.alt;
-
-    }
-
-
-    galleryItems.forEach(function (item) {
-
-        const image =
-            item.querySelector("img");
-
-
-        image.addEventListener(
-            "click",
-            function () {
-
-                const images =
-                    getVisibleImages();
-
-
-                const index =
-                    images.indexOf(image);
-
-
-                openLightbox(index);
-
-            }
-        );
-
-    });
-
-
-    closeButton.addEventListener(
-        "click",
-        closeLightbox
-    );
-
-
-    nextButton.addEventListener(
-        "click",
-        showNextImage
-    );
-
-
-    previousButton.addEventListener(
-        "click",
-        showPreviousImage
-    );
-
-
-    lightbox.addEventListener(
-        "click",
-        function (event) {
-
-            if (
-                event.target === lightbox
-            ) {
-
-                closeLightbox();
-
-            }
-
-        }
-    );
-
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (
-                !lightbox.classList.contains("show")
-            ) {
-                return;
-            }
-
-
-            if (event.key === "Escape") {
-
-                closeLightbox();
-
-            }
-
-
-            if (event.key === "ArrowRight") {
-
-                showNextImage();
-
-            }
-
-
-            if (event.key === "ArrowLeft") {
-
-                showPreviousImage();
-
-            }
-
-        }
-    );
-
-});
-
-</script>
-
-
-<?php
-include 'includes/footer.php';
-?>
+<?php include 'includes/footer.php'; ?>
