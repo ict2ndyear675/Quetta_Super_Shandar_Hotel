@@ -77,7 +77,62 @@
                     atmosphere of Quetta Super Shandar Hotel.
                 </p>
 
+<<<<<<< HEAD
+</section>
+
+
+<!-- =========================================================
+     GALLERY FILTER
+========================================================= -->
+
+<section class="gallery-section">
+
+    <div class="container">
+
+        <div class="gallery-filter">
+
+            <button
+                class="gallery-filter-btn active"
+                data-filter="all"
+                type="button" style="color: aquant; background-color: #fff; border: 1px solid aquant; border-radius: 5px;"
+            >
+                All
+            </button>
+
+            <button
+                class="gallery-filter-btn"
+                data-filter="hotel"
+                type="button"
+            >
+                Hotel & Atmosphere
+            </button>
+
+            <button
+                class="gallery-filter-btn"
+                data-filter="food"
+                type="button"
+            >
+                Traditional Food
+            </button>
+
+            <button
+                class="gallery-filter-btn"
+                data-filter="chai"
+                type="button"
+            >
+                Chai & Kahwa
+            </button>
+
+            <button
+                class="gallery-filter-btn"
+                data-filter="breakfast"
+                type="button"
+            >
+                Breakfast & Paratha
+            </button>
+=======
             </div>
+>>>>>>> 604ec93a70d20ae8e0c7be0e20b80199a44c26d0
 
         </div>
 
