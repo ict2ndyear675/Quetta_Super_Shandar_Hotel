@@ -2210,1433 +2210,438 @@ a {
    GALLERY HERO
 ========================================================= */
 
-<<<<<<< HEAD
-/* =========================================================
-   QUETTA SUPER SHANDAR HOTEL
-   GALLERY PAGE
-========================================================= */
-
-
-/* =========================================================
-   GALLERY HERO
-========================================================= */
-
-.gallery-hero {
-    position: relative;
-    min-height: 390px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #790016 0%,
-            #c8102e 50%,
-            #8d001c 100%
-        );
-
-    overflow: hidden;
-}
-
-
-/* Hero decorative circle */
-
-.gallery-hero::before {
-    content: "";
-
-    position: absolute;
-
-    width: 450px;
-    height: 450px;
-
-    border: 1px solid rgba(255, 193, 7, 0.20);
-
-    border-radius: 50%;
-
-    top: -220px;
-    left: -150px;
-}
-
-
-/* Hero decorative circle */
-
-.gallery-hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 500px;
-    height: 500px;
-
-    border: 1px solid rgba(255, 255, 255, 0.10);
-
-    border-radius: 50%;
-
-    bottom: -300px;
-    right: -160px;
-}
-
-
-/* Hero overlay */
-
-.gallery-hero-overlay {
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.12),
-            rgba(255, 255, 255, 0.03)
-        );
-}
-
-
-/* Hero content */
-
-.gallery-hero-content {
-    position: relative;
-
-    z-index: 2;
-
-    color: #ffffff;
-
-    padding: 70px 20px;
-}
-
-
-/* Hero label */
-
-.gallery-hero-label {
-    display: inline-block;
-
-    color: #ffc107;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 12px;
-
-    text-transform: uppercase;
-}
-
-
-/* Hero heading */
-
-.gallery-hero h1 {
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(45px, 6vw, 72px);
-
-    font-weight: 700;
-
-    line-height: 1.1;
-
-    margin: 0 0 15px;
-
-    color: #ffffff;
-}
-
-
-/* Hero line */
-
-.gallery-hero-line {
-    width: 70px;
-    height: 3px;
-
-    background: #ffc107;
-
-    margin: 0 auto 20px;
-}
-
-
-/* Hero paragraph */
-
-.gallery-hero p {
-    max-width: 650px;
-
-    margin: 0 auto;
-
-    color: rgba(255, 255, 255, 0.90);
-
-    font-size: 15px;
-
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   GALLERY INTRO
-========================================================= */
-
-.gallery-intro {
-    padding: 75px 0 45px;
-
-    background: #ffffff;
-
-    text-align: center;
-}
-
-
-/* Label */
-
-.gallery-intro .section-label {
-    display: block;
-
-    color: #c8102e;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 10px;
-
-    text-transform: uppercase;
-}
-
-
-/* Main title */
-
-.gallery-section-title {
-    font-family: "Playfair Display", serif;
-
-    color: #171717;
-
-    font-size: 44px;
-
-    font-weight: 700;
-
-    line-height: 1.2;
-
-    margin: 0 0 15px;
-}
-
-
-/* Gold line */
-
-.gallery-gold-line {
-    width: 65px;
-    height: 3px;
-
-    background: #ffc107;
-
-    margin: 0 auto 22px;
-}
-
-
-/* Intro paragraph */
-
-.gallery-intro-text {
-    max-width: 850px;
-
-    margin: 0 auto;
-
-    color: #666666;
-
-    font-size: 15px;
-
-    line-height: 1.9;
-}
-
-
-/* =========================================================
-   GALLERY MAIN SECTION
-========================================================= */
-
-.gallery-section {
-    padding: 50px 0 90px;
-
-    background: #f8f8f8;
-}
-
-
-/* =========================================================
-   FILTER BUTTON AREA
-========================================================= */
-
-.gallery-filter {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    margin-bottom: 30px;
-
-    padding: 0;
-}
-
-
-/* =========================================================
-   FILTER BUTTONS
-========================================================= */
-
-.gallery-filter-btn {
-    appearance: none;
-    -webkit-appearance: none;
-
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 7px;
-
-    padding: 11px 20px;
-
-    border: 1px solid #dddddd;
-
-    border-radius: 30px;
-
-    background: #ffffff;
-
-    color: #333333;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 13px;
-
-    font-weight: 600;
-
-    line-height: 1.4;
-
-    white-space: nowrap;
-
-    cursor: pointer;
-
-    outline: none;
-
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        border-color 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-
-/* Button hover */
-
-.gallery-filter-btn:hover {
-    background: #fff5d6;
-
-    color: #c8102e;
-
-    border-color: #ffc107;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-
-/* Active button */
-
-.gallery-filter-btn.active {
-    background: #c8102e;
-
-    color: #ffffff;
-
-    border-color: #c8102e;
-
-    box-shadow:
-        0 6px 18px rgba(200, 16, 46, 0.20);
-}
-
-
-/* Active hover */
-
-.gallery-filter-btn.active:hover {
-    background: #a9001f;
-
-    border-color: #a9001f;
-
-    color: #ffffff;
-}
-
-
-/* =========================================================
-   GALLERY GRID
-========================================================= */
-
-.gallery-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-
-    gap: 24px;
-
-    width: 100%;
-}
-
-
-/* =========================================================
-   GALLERY ITEM
-========================================================= */
-
-.gallery-item {
-    min-width: 0;
-
-    width: 100%;
-
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
-}
-
-
-/* Hidden items from filter */
-
-.gallery-item.gallery-hidden {
-    display: none !important;
-}
-
-
-/* Large items */
-
-.gallery-item.gallery-large {
-    grid-column: span 2;
-}
-
-
-/* Wide items */
-
-.gallery-item.gallery-wide {
-    grid-column: span 2;
-}
-
-
-/* =========================================================
-   GALLERY CARD
-========================================================= */
-
-.gallery-card {
-    position: relative;
-
-    width: 100%;
-
-    height: 290px;
-
-    overflow: hidden;
-
-    background: #ffffff;
-
-    border-radius: 12px;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.08);
-
-    cursor: pointer;
-
-    isolation: isolate;
-
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
-}
-
-
-/* Card hover */
-
-.gallery-card:hover {
-    transform: translateY(-7px);
-
-    box-shadow:
-        0 18px 40px rgba(0, 0, 0, 0.15);
-}
-
-
-/* Large card */
-
-.gallery-item.gallery-large .gallery-card {
-    height: 360px;
-}
-
-
-/* Wide card */
-
-.gallery-item.gallery-wide .gallery-card {
-    height: 320px;
-}
-
-
-/* =========================================================
-   GALLERY IMAGE
-========================================================= */
-
-.gallery-card img {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    max-width: none;
-
-    object-fit: cover;
-
-    object-position: center;
-
-    border: 0;
-
-    transition:
-        transform 0.6s ease;
-}
-
-
-/* Image zoom */
-
-.gallery-card:hover img {
-    transform: scale(1.07);
-}
-
-
-/* =========================================================
-   IMAGE OVERLAY
-========================================================= */
-
-.gallery-overlay {
-    position: absolute;
-
-    inset: 0;
-
-    display: flex;
-
-    align-items: flex-end;
-
-    padding: 25px;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.82) 0%,
-            rgba(0, 0, 0, 0.45) 35%,
-            rgba(0, 0, 0, 0.05) 70%,
-            transparent 100%
-        );
-
-    opacity: 0;
-
-    transition:
-        opacity 0.35s ease;
-}
-
-
-/* Show overlay */
-
-.gallery-card:hover .gallery-overlay {
-    opacity: 1;
-}
-
-
-/* =========================================================
-   OVERLAY CONTENT
-========================================================= */
-
-.gallery-overlay-content {
-    position: relative;
-
-    width: 100%;
-
-    color: #ffffff;
-
-    transform: translateY(18px);
-
-    transition:
-        transform 0.35s ease;
-}
-
-
-/* Move content on hover */
-
-.gallery-card:hover .gallery-overlay-content {
-    transform: translateY(0);
-}
-
-
-/* Category */
-
-.gallery-overlay-content span {
-    display: block;
-
-    color: #ffc107;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 6px;
-}
-
-
-/* Image title */
-
-.gallery-overlay-content h3 {
-    font-family: "Playfair Display", serif;
-
-    color: #ffffff;
-
-    font-size: 23px;
-
-    font-weight: 700;
-
-    line-height: 1.3;
-
-    margin: 0;
-
-    padding-right: 50px;
-}
-
-
-/* Plus icon */
-
-.gallery-overlay-content i {
-    position: absolute;
-
-    right: 0;
-
-    bottom: 0;
-
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #ffc107;
-
-    color: #171717;
-
-    font-size: 17px;
-
-    transform: scale(0.7);
-
-    opacity: 0;
-
-    transition:
-        transform 0.3s ease,
-        opacity 0.3s ease;
-}
-
-
-/* Show plus icon */
-
-.gallery-card:hover .gallery-overlay-content i {
-    transform: scale(1);
-
-    opacity: 1;
-}
-
-
-/* =========================================================
-   ALWAYS SHOW OVERLAY SLIGHTLY ON DESKTOP
-========================================================= */
-
-.gallery-card::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    pointer-events: none;
-
-    border: 1px solid transparent;
-
-    border-radius: 12px;
-
-    transition:
-        border-color 0.3s ease;
-}
-
-
-.gallery-card:hover::after {
-    border-color: rgba(255, 193, 7, 0.35);
-}
-
-
-/* =========================================================
-   LIGHTBOX
-========================================================= */
-
-.gallery-lightbox {
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 99999;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 40px;
-
-    background:
-        rgba(0, 0, 0, 0.94);
-
-    visibility: hidden;
-
-    opacity: 0;
-
-    pointer-events: none;
-
-    transition:
-        opacity 0.3s ease,
-        visibility 0.3s ease;
-}
-
-
-/* Open lightbox */
-
-.gallery-lightbox.show {
-    visibility: visible;
-
-    opacity: 1;
-
-    pointer-events: auto;
-}
-
-
-/* Lightbox image */
-
-.gallery-lightbox img {
-    display: block;
-
-    width: auto;
-
-    max-width: min(90vw, 1100px);
-
-    height: auto;
-
-    max-height: 82vh;
-
-    object-fit: contain;
-
-    border-radius: 8px;
-
-    box-shadow:
-        0 20px 70px rgba(0, 0, 0, 0.55);
-}
-
-
-/* =========================================================
-   LIGHTBOX BUTTONS
-========================================================= */
-
-.lightbox-close,
-.lightbox-prev,
-.lightbox-next {
-    position: absolute;
-
-    z-index: 5;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border: none;
-
-    outline: none;
-
-    cursor: pointer;
-
-    background: rgba(255, 255, 255, 0.12);
-
-    color: #ffffff;
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
-}
-
-
-/* Close */
-
-.lightbox-close {
-    top: 25px;
-
-    right: 30px;
-
-    width: 48px;
-    height: 48px;
-
-    border-radius: 50%;
-
-    font-size: 20px;
-}
-
-
-/* Previous */
-
-.lightbox-prev {
-    left: 25px;
-
-    top: 50%;
-
-    width: 50px;
-    height: 50px;
-
-    border-radius: 50%;
-
-    transform: translateY(-50%);
-
-    font-size: 20px;
-}
-
-
-/* Next */
-
-.lightbox-next {
-    right: 25px;
-
-    top: 50%;
-
-    width: 50px;
-    height: 50px;
-
-    border-radius: 50%;
-
-    transform: translateY(-50%);
-
-    font-size: 20px;
-}
-
-
-/* Button hover */
-
-.lightbox-close:hover,
-.lightbox-prev:hover,
-.lightbox-next:hover {
-    background: #ffc107;
-
-    color: #171717;
-}
-
-
-/* Keep vertical transform on arrow hover */
-
-.lightbox-prev:hover {
-    transform: translateY(-50%) scale(1.08);
-}
-
-
-.lightbox-next:hover {
-    transform: translateY(-50%) scale(1.08);
-}
-
-
-/* Caption */
-
-.lightbox-caption {
-    position: absolute;
-
-    left: 50%;
-
-    bottom: 22px;
-
-    transform: translateX(-50%);
-
-    max-width: 80%;
-
-    padding: 8px 18px;
-
-    border-radius: 20px;
-
-    background: rgba(0, 0, 0, 0.65);
-
-    color: #ffffff;
-
-    font-size: 13px;
-
-    text-align: center;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
-}
-
-
-/* Prevent page scroll */
-
-body.lightbox-open {
-    overflow: hidden;
-}
-
-
-/* =========================================================
-   GALLERY CTA
-========================================================= */
-
-.gallery-cta {
-    position: relative;
-
-    padding: 75px 0;
-
-    background:
-        linear-gradient(
-            135deg,
-            #790016 0%,
-            #c8102e 55%,
-            #8d001c 100%
-        );
-
-    color: #ffffff;
-
-    text-align: center;
-
-    overflow: hidden;
-}
-
-
-/* CTA decorative overlay */
-
-.gallery-cta-overlay {
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        radial-gradient(
-            circle at 50% 50%,
-            rgba(255, 193, 7, 0.08),
-            transparent 55%
-        );
-}
-
-
-/* CTA content */
-
-.gallery-cta-content {
-    position: relative;
-
-    z-index: 2;
-}
-
-
-/* CTA small label */
-
-.gallery-cta-content > span {
-    display: block;
-
-    color: #ffc107;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 12px;
-
-    text-transform: uppercase;
-}
-
-
-/* CTA heading */
-
-.gallery-cta-content h2 {
-    font-family: "Playfair Display", serif;
-
-    color: #ffffff;
-
-    font-size: 40px;
-
-    font-weight: 700;
-
-    line-height: 1.2;
-
-    margin: 0 0 12px;
-}
-
-
-/* CTA paragraph */
-
-.gallery-cta-content p {
-    max-width: 650px;
-
-    margin: 0 auto 28px;
-
-    color: rgba(255, 255, 255, 0.88);
-
-    font-size: 14px;
-
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   CTA BUTTONS
-========================================================= */
-
-.gallery-menu-btn,
-.gallery-contact-btn {
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 8px;
-
-    min-width: 165px;
-
-    padding: 12px 24px;
-
-    margin: 5px;
-
-    border-radius: 5px;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 13px;
-
-    font-weight: 600;
-
-    text-decoration: none;
-
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        color 0.3s ease,
-        border-color 0.3s ease;
-}
-
-
-/* Menu button */
-
-.gallery-menu-btn {
-    background: #ffc107;
-
-    color: #171717;
-
-    border: 2px solid #ffc107;
-}
-
-
-/* Menu hover */
-
-.gallery-menu-btn:hover {
-    background: #e0a800;
-
-    border-color: #e0a800;
-
-    color: #171717;
-
-    transform: translateY(-2px);
-}
-
-
-/* Contact button */
-
-.gallery-contact-btn {
-    background: transparent;
-
-    color: #ffffff;
-
-    border: 2px solid rgba(255, 255, 255, 0.75);
-}
-
-
-/* Contact hover */
-
-.gallery-contact-btn:hover {
-    background: #ffffff;
-
-    border-color: #ffffff;
-
-    color: #c8102e;
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 991px) {
-
-    .gallery-hero {
-        min-height: 340px;
-    }
-
-
-    .gallery-hero-content {
-        padding: 60px 20px;
-    }
-
-
-    .gallery-intro {
-        padding: 60px 20px 40px;
-    }
-
-
-    .gallery-section {
-        padding: 45px 20px 70px;
-    }
-
-
-    .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        gap: 20px;
-    }
-
-
-    .gallery-item.gallery-large,
-    .gallery-item.gallery-wide {
-        grid-column: span 2;
-    }
-
-
-    .gallery-card {
-        height: 270px;
-    }
-
-
-    .gallery-item.gallery-large .gallery-card,
-    .gallery-item.gallery-wide .gallery-card {
-        height: 330px;
-    }
-
-
-    .gallery-section-title {
-        font-size: 38px;
-    }
-
-
-    .gallery-cta {
-        padding: 65px 20px;
-    }
-
-
-    .gallery-cta-content h2 {
-        font-size: 34px;
-    }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 767px) {
-
-    .gallery-hero {
-        min-height: 310px;
-    }
-
-
-    .gallery-hero h1 {
-        font-size: 45px;
-    }
-
-
-    .gallery-hero p {
-        font-size: 14px;
-    }
-
-
-    .gallery-intro {
-        padding: 55px 20px 35px;
-    }
-
-
-    .gallery-section-title {
-        font-size: 34px;
-    }
-
-
-    .gallery-intro-text {
-        font-size: 14px;
-    }
-
-
-    .gallery-section {
-        padding: 35px 15px 55px;
-    }
-
-
-    .gallery-filter {
-        justify-content: flex-start;
-
-        overflow-x: auto;
-
-        flex-wrap: nowrap;
-
-        padding: 5px 2px 12px;
-
-        margin-bottom: 22px;
-
-        scrollbar-width: thin;
-    }
-
-
-    .gallery-filter-btn {
-        flex: 0 0 auto;
-
-        padding: 10px 15px;
-
-        font-size: 12px;
-    }
-
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-    }
-
-
-    .gallery-item.gallery-large,
-    .gallery-item.gallery-wide {
-        grid-column: span 1;
-    }
-
-
-    .gallery-card,
-    .gallery-item.gallery-large .gallery-card,
-    .gallery-item.gallery-wide .gallery-card {
-        height: 270px;
-    }
-
-
-    /* Always show overlay on mobile */
-
-    .gallery-overlay {
-        opacity: 1;
-
-        padding: 20px;
-    }
-
-
-    .gallery-overlay-content {
-        transform: translateY(0);
-    }
-
-
-    .gallery-overlay-content i {
-        transform: scale(1);
-
-        opacity: 1;
-    }
-
-
-    .gallery-overlay-content h3 {
-        font-size: 20px;
-    }
-
-
-    .gallery-cta {
-        padding: 55px 20px;
-    }
-
-
-    .gallery-cta-content h2 {
-        font-size: 30px;
-    }
-
-
-    .gallery-cta-content p {
-        font-size: 13px;
-    }
-
-
-    .gallery-menu-btn,
-    .gallery-contact-btn {
-        width: 100%;
-
-        margin: 5px 0;
-    }
-
-
-    /* Lightbox */
-
-    .gallery-lightbox {
-        padding: 20px;
-    }
-
-
-    .gallery-lightbox img {
-        max-width: 94vw;
-
-        max-height: 75vh;
-    }
-
-
-    .lightbox-close {
-        top: 15px;
-
-        right: 15px;
-
-        width: 42px;
-        height: 42px;
-    }
-
-
-    .lightbox-prev {
-        left: 12px;
-
-        width: 42px;
-        height: 42px;
-    }
-
-
-    .lightbox-next {
-        right: 12px;
-
-        width: 42px;
-        height: 42px;
-    }
-
-
-    .lightbox-caption {
-        bottom: 15px;
-
-        max-width: 70%;
-
-        font-size: 11px;
-    }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .gallery-hero {
-        min-height: 280px;
-    }
-
-
-    .gallery-hero-content {
-        padding: 50px 15px;
-    }
-
-
-    .gallery-hero-label {
-        font-size: 10px;
-
-        letter-spacing: 2px;
-    }
-
-
-    .gallery-hero h1 {
-        font-size: 38px;
-    }
-
-
-    .gallery-hero p {
-        font-size: 13px;
-    }
-
-
-    .gallery-hero-line {
-        width: 55px;
-    }
-
-
-    .gallery-intro {
-        padding: 45px 15px 30px;
-    }
-
-
-    .gallery-section-title {
-        font-size: 30px;
-    }
-
-
-    .gallery-section {
-        padding: 30px 12px 50px;
-    }
-
-
-    .gallery-card,
-    .gallery-item.gallery-large .gallery-card,
-    .gallery-item.gallery-wide .gallery-card {
-        height: 230px;
-    }
-
-
-    .gallery-overlay {
-        padding: 16px;
-    }
-
-
-    .gallery-overlay-content span {
-        font-size: 9px;
-
-        letter-spacing: 1.5px;
-    }
-
-
-    .gallery-overlay-content h3 {
-        font-size: 18px;
-
-        padding-right: 42px;
-    }
-
-
-    .gallery-overlay-content i {
-        width: 36px;
-        height: 36px;
-
-        font-size: 14px;
-    }
-
-
-    .gallery-cta-content h2 {
-        font-size: 27px;
-    }
-
-
-    .gallery-cta-content > span {
-        font-size: 10px;
-
-        letter-spacing: 2px;
-    }
-}
-
-=======
->>>>>>> 604ec93a70d20ae8e0c7be0e20b80199a44c26d0
 /* =========================================================
    29. CONTACT PAGE
 ========================================================= */
 
 
+/* =====================================================
+   FOOTER
+====================================================== */
 
+.main-footer {
+    background: #151515;
+    color: #ffffff;
+    padding-top: 65px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Small yellow/red decorative line at top */
+
+.main-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #b5121b;
+}
+
+.main-footer::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f5c400;
+}
+
+
+/* =====================================================
+   FOOTER BRAND
+====================================================== */
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.footer-logo-icon {
+    width: 58px;
+    height: 58px;
+    background: #b5121b;
+    border: 2px solid #f5c400;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.footer-logo-icon i {
+    font-size: 27px;
+    color: #ffffff;
+}
+
+.footer-logo-icon:hover {
+    background: #f5c400;
+    transform: translateY(-4px) rotate(-5deg);
+}
+
+.footer-logo-icon:hover i {
+    color: #b5121b;
+}
+
+
+.footer-brand h3 {
+    font-family: "Playfair Display", serif;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.footer-brand span {
+    display: block;
+    color: #f5c400;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-top: 2px;
+}
+
+
+/* =====================================================
+   FOOTER DESCRIPTION
+====================================================== */
+
+.footer-description {
+    color: #bbbbbb;
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 370px;
+    margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   SOCIAL LINKS
+====================================================== */
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #222222;
+    border: 1px solid #444444;
+    border-radius: 50%;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #b5121b;
+    border-color: #f5c400;
+    color: #ffffff;
+
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(181, 18, 27, 0.35);
+}
+
+
+/* =====================================================
+   FOOTER HEADINGS
+====================================================== */
+
+.main-footer h4 {
+    position: relative;
+
+    font-family: "Playfair Display", serif;
+    color: #ffffff;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+}
+
+
+/* Red underline */
+
+.main-footer h4::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 42px;
+    height: 3px;
+
+    background: #b5121b;
+
+    transition: width 0.3s ease;
+}
+
+
+/* Yellow small line */
+
+.main-footer h4::before {
+    content: "";
+
+    position: absolute;
+    left: 45px;
+    bottom: 0;
+
+    width: 12px;
+    height: 3px;
+
+    background: #f5c400;
+}
+
+
+/* Heading hover */
+
+.main-footer h4:hover::after {
+    width: 65px;
+}
+
+
+/* =====================================================
+   FOOTER LINKS
+====================================================== */
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+    color: #bbbbbb;
+    font-size: 13px;
+}
+
+.footer-links a {
+    color: #bbbbbb;
+    text-decoration: none;
+
+    display: inline-block;
+
+    transition: all 0.3s ease;
+}
+
+.footer-links a::before {
+    content: "›";
+    color: #f5c400;
+    font-size: 17px;
+    margin-right: 7px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+}
+
+
+/* =====================================================
+   FOOTER CONTACT
+====================================================== */
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 13px;
+
+    margin-bottom: 17px;
+
+    color: #bbbbbb;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.footer-contact i {
+    color: #f5c400;
+    font-size: 17px;
+
+    min-width: 20px;
+
+    margin-top: 2px;
+
+    transition: all 0.3s ease;
+}
+
+.footer-contact li:hover i {
+    color: #b5121b;
+    transform: scale(1.2);
+}
+
+.footer-contact li:hover span {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   COPYRIGHT
+====================================================== */
+
+.copyright {
+    margin-top: 55px;
+
+    background: #ffffff;
+
+    border-top: 3px solid #b5121b;
+
+    position: relative;
+}
+
+
+/* Yellow line below red line */
+
+.copyright::before {
+    content: "";
+
+    position: absolute;
+    top: -3px;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background: #f5c400;
+}
+
+
+.copyright-content {
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.copyright-content p {
+    margin: 0;
+
+    color: #b5121b;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =====================================================
+   COPYRIGHT HOVER
+====================================================== */
+
+.copyright-content p:hover {
+    color: #8f0e15;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 991px) {
+
+    .main-footer {
+        padding-top: 50px;
+    }
+
+    .footer-brand {
+        margin-bottom: 15px;
+    }
+
+    .copyright {
+        margin-top: 40px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .main-footer .row {
+        row-gap: 35px !important;
+    }
+
+    .footer-description {
+        max-width: 100%;
+    }
+
+    .copyright-content {
+        min-height: auto;
+
+        padding: 18px 0;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 7px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .main-footer {
+        padding-top: 45px;
+    }
+
+    .footer-brand h3 {
+        font-size: 22px;
+    }
+
+    .footer-brand span {
+        font-size: 9px;
+    }
+
+    .footer-logo-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .social-links a {
+        width: 38px;
+        height: 38px;
+    }
+
+}
 
 /* =========================================================
    END OF STYLE.CSS
