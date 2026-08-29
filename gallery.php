@@ -78,7 +78,7 @@ include 'includes/header.php';
             <button
                 class="gallery-filter-btn active"
                 data-filter="all"
-                type="button"
+                type="button" style="color: aquant; background-color: #fff; border: 1px solid aquant; border-radius: 5px;"
             >
                 All
             </button>

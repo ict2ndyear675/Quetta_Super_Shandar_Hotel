@@ -2215,6 +2215,16 @@ a {
    GALLERY HERO
 ========================================================= */
 
+/* =========================================================
+   QUETTA SUPER SHANDAR HOTEL
+   GALLERY PAGE
+========================================================= */
+
+
+/* =========================================================
+   GALLERY HERO
+========================================================= */
+
 .gallery-hero {
     position: relative;
     min-height: 390px;
@@ -2228,16 +2238,16 @@ a {
     background:
         linear-gradient(
             135deg,
-            rgba(121, 0, 22, 0.96),
-            rgba(200, 16, 46, 0.94),
-            rgba(141, 0, 28, 0.96)
+            #790016 0%,
+            #c8102e 50%,
+            #8d001c 100%
         );
 
     overflow: hidden;
 }
 
 
-/* Decorative circles */
+/* Hero decorative circle */
 
 .gallery-hero::before {
     content: "";
@@ -2256,6 +2266,8 @@ a {
 }
 
 
+/* Hero decorative circle */
+
 .gallery-hero::after {
     content: "";
 
@@ -2273,6 +2285,21 @@ a {
 }
 
 
+/* Hero overlay */
+
+.gallery-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.12),
+            rgba(255, 255, 255, 0.03)
+        );
+}
+
+
 /* Hero content */
 
 .gallery-hero-content {
@@ -2285,6 +2312,8 @@ a {
     padding: 70px 20px;
 }
 
+
+/* Hero label */
 
 .gallery-hero-label {
     display: inline-block;
@@ -2303,6 +2332,8 @@ a {
 }
 
 
+/* Hero heading */
+
 .gallery-hero h1 {
     font-family: "Playfair Display", serif;
 
@@ -2312,11 +2343,13 @@ a {
 
     line-height: 1.1;
 
-    margin-bottom: 15px;
+    margin: 0 0 15px;
 
     color: #ffffff;
 }
 
+
+/* Hero line */
 
 .gallery-hero-line {
     width: 70px;
@@ -2327,6 +2360,8 @@ a {
     margin: 0 auto 20px;
 }
 
+
+/* Hero paragraph */
 
 .gallery-hero p {
     max-width: 650px;
@@ -2342,7 +2377,7 @@ a {
 
 
 /* =========================================================
-   GALLERY INTRODUCTION
+   GALLERY INTRO
 ========================================================= */
 
 .gallery-intro {
@@ -2354,7 +2389,9 @@ a {
 }
 
 
-.gallery-section-label {
+/* Label */
+
+.gallery-intro .section-label {
     display: block;
 
     color: #c8102e;
@@ -2371,6 +2408,8 @@ a {
 }
 
 
+/* Main title */
+
 .gallery-section-title {
     font-family: "Playfair Display", serif;
 
@@ -2382,9 +2421,11 @@ a {
 
     line-height: 1.2;
 
-    margin-bottom: 15px;
+    margin: 0 0 15px;
 }
 
+
+/* Gold line */
 
 .gallery-gold-line {
     width: 65px;
@@ -2396,8 +2437,10 @@ a {
 }
 
 
-.gallery-section-description {
-    max-width: 780px;
+/* Intro paragraph */
+
+.gallery-intro-text {
+    max-width: 850px;
 
     margin: 0 auto;
 
@@ -2406,96 +2449,6 @@ a {
     font-size: 15px;
 
     line-height: 1.9;
-}
-
-
-/* =========================================================
-   GALLERY FILTER NAVIGATION
-========================================================= */
-
-.gallery-filter-section {
-    padding: 10px 0 35px;
-
-    background: #ffffff;
-}
-
-
-.gallery-filters {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-}
-
-
-.gallery-filter {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 7px;
-
-    padding: 10px 20px;
-
-    border: 1px solid #eeeeee;
-
-    border-radius: 30px;
-
-    background: #ffffff;
-
-    color: #444444;
-
-    font-size: 13px;
-
-    font-weight: 600;
-
-    text-decoration: none;
-
-    cursor: pointer;
-
-    transition: all 0.3s ease;
-}
-
-
-.gallery-filter i {
-    color: #c8102e;
-
-    font-size: 14px;
-
-    transition: all 0.3s ease;
-}
-
-
-.gallery-filter:hover {
-    background: #fff5d6;
-
-    color: #c8102e;
-
-    border-color: #ffc107;
-}
-
-
-.gallery-filter:hover i {
-    color: #c8102e;
-}
-
-
-.gallery-filter.active {
-    background: #c8102e;
-
-    color: #ffffff;
-
-    border-color: #c8102e;
-}
-
-
-.gallery-filter.active i {
-    color: #ffc107;
 }
 
 
@@ -2511,16 +2464,165 @@ a {
 
 
 /* =========================================================
+   FILTER BUTTON AREA
+========================================================= */
+
+.gallery-filter {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+    padding: 0;
+}
+
+
+/* =========================================================
+   FILTER BUTTONS
+========================================================= */
+
+.gallery-filter-btn {
+    appearance: none;
+    -webkit-appearance: none;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 11px 20px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+
+    color: #333333;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    outline: none;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Button hover */
+
+.gallery-filter-btn:hover {
+    background: #fff5d6;
+
+    color: #c8102e;
+
+    border-color: #ffc107;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Active button */
+
+.gallery-filter-btn.active {
+    background: #c8102e;
+
+    color: #ffffff;
+
+    border-color: #c8102e;
+
+    box-shadow:
+        0 6px 18px rgba(200, 16, 46, 0.20);
+}
+
+
+/* Active hover */
+
+.gallery-filter-btn.active:hover {
+    background: #a9001f;
+
+    border-color: #a9001f;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
    GALLERY GRID
 ========================================================= */
 
 .gallery-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     gap: 24px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   GALLERY ITEM
+========================================================= */
+
+.gallery-item {
+    min-width: 0;
+
+    width: 100%;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Hidden items from filter */
+
+.gallery-item.gallery-hidden {
+    display: none !important;
+}
+
+
+/* Large items */
+
+.gallery-item.gallery-large {
+    grid-column: span 2;
+}
+
+
+/* Wide items */
+
+.gallery-item.gallery-wide {
+    grid-column: span 2;
 }
 
 
@@ -2531,24 +2633,30 @@ a {
 .gallery-card {
     position: relative;
 
+    width: 100%;
+
     height: 290px;
 
     overflow: hidden;
 
     background: #ffffff;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.08);
 
     cursor: pointer;
 
+    isolation: isolate;
+
     transition:
         transform 0.35s ease,
         box-shadow 0.35s ease;
 }
 
+
+/* Card hover */
 
 .gallery-card:hover {
     transform: translateY(-7px);
@@ -2558,25 +2666,47 @@ a {
 }
 
 
+/* Large card */
+
+.gallery-item.gallery-large .gallery-card {
+    height: 360px;
+}
+
+
+/* Wide card */
+
+.gallery-item.gallery-wide .gallery-card {
+    height: 320px;
+}
+
+
 /* =========================================================
    GALLERY IMAGE
 ========================================================= */
 
 .gallery-card img {
+    display: block;
+
     width: 100%;
     height: 100%;
 
+    max-width: none;
+
     object-fit: cover;
 
-    display: block;
+    object-position: center;
+
+    border: 0;
 
     transition:
-        transform 0.5s ease;
+        transform 0.6s ease;
 }
 
 
+/* Image zoom */
+
 .gallery-card:hover img {
-    transform: scale(1.08);
+    transform: scale(1.07);
 }
 
 
@@ -2593,20 +2723,25 @@ a {
 
     align-items: flex-end;
 
-    padding: 22px;
+    padding: 25px;
 
     background:
         linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.78),
-            rgba(0, 0, 0, 0.05) 65%
+            rgba(0, 0, 0, 0.82) 0%,
+            rgba(0, 0, 0, 0.45) 35%,
+            rgba(0, 0, 0, 0.05) 70%,
+            transparent 100%
         );
 
     opacity: 0;
 
-    transition: opacity 0.35s ease;
+    transition:
+        opacity 0.35s ease;
 }
 
+
+/* Show overlay */
 
 .gallery-card:hover .gallery-overlay {
     opacity: 1;
@@ -2614,24 +2749,33 @@ a {
 
 
 /* =========================================================
-   GALLERY TEXT
+   OVERLAY CONTENT
 ========================================================= */
 
-.gallery-info {
+.gallery-overlay-content {
+    position: relative;
+
+    width: 100%;
+
     color: #ffffff;
 
-    transform: translateY(15px);
+    transform: translateY(18px);
 
-    transition: transform 0.35s ease;
+    transition:
+        transform 0.35s ease;
 }
 
 
-.gallery-card:hover .gallery-info {
+/* Move content on hover */
+
+.gallery-card:hover .gallery-overlay-content {
     transform: translateY(0);
 }
 
 
-.gallery-info span {
+/* Category */
+
+.gallery-overlay-content span {
     display: block;
 
     color: #ffc107;
@@ -2644,30 +2788,37 @@ a {
 
     text-transform: uppercase;
 
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 
-.gallery-info h3 {
-    font-family: "Playfair Display", serif;
+/* Image title */
 
-    font-size: 23px;
+.gallery-overlay-content h3 {
+    font-family: "Playfair Display", serif;
 
     color: #ffffff;
 
+    font-size: 23px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
     margin: 0;
+
+    padding-right: 50px;
 }
 
 
-/* =========================================================
-   VIEW ICON
-========================================================= */
+/* Plus icon */
 
-.gallery-view-icon {
+.gallery-overlay-content i {
     position: absolute;
 
-    top: 18px;
-    right: 18px;
+    right: 0;
+
+    bottom: 0;
 
     width: 42px;
     height: 42px;
@@ -2679,11 +2830,11 @@ a {
 
     border-radius: 50%;
 
-    background: rgba(255, 193, 7, 0.95);
+    background: #ffc107;
 
     color: #171717;
 
-    font-size: 16px;
+    font-size: 17px;
 
     transform: scale(0.7);
 
@@ -2695,7 +2846,9 @@ a {
 }
 
 
-.gallery-card:hover .gallery-view-icon {
+/* Show plus icon */
+
+.gallery-card:hover .gallery-overlay-content i {
     transform: scale(1);
 
     opacity: 1;
@@ -2703,71 +2856,244 @@ a {
 
 
 /* =========================================================
-   FEATURED GALLERY IMAGE
+   ALWAYS SHOW OVERLAY SLIGHTLY ON DESKTOP
 ========================================================= */
 
-.gallery-card.featured {
-    grid-column: span 2;
+.gallery-card::after {
+    content: "";
 
-    height: 400px;
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    border: 1px solid transparent;
+
+    border-radius: 12px;
+
+    transition:
+        border-color 0.3s ease;
 }
 
 
-.gallery-card.featured .gallery-info h3 {
-    font-size: 28px;
+.gallery-card:hover::after {
+    border-color: rgba(255, 193, 7, 0.35);
 }
 
 
 /* =========================================================
-   GALLERY CATEGORY LABEL
+   LIGHTBOX
 ========================================================= */
 
-.gallery-category {
+.gallery-lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+
+    background:
+        rgba(0, 0, 0, 0.94);
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+/* Open lightbox */
+
+.gallery-lightbox.show {
+    visibility: visible;
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+/* Lightbox image */
+
+.gallery-lightbox img {
+    display: block;
+
+    width: auto;
+
+    max-width: min(90vw, 1100px);
+
+    height: auto;
+
+    max-height: 82vh;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================================
+   LIGHTBOX BUTTONS
+========================================================= */
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
     position: absolute;
 
-    top: 15px;
-    left: 15px;
+    z-index: 5;
 
-    padding: 6px 12px;
+    display: flex;
 
-    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
 
-    background: #c8102e;
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.12);
 
     color: #ffffff;
 
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-
-    z-index: 3;
-
-    box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.15);
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
 
-/* =========================================================
-   GALLERY EMPTY / MORE IMAGES MESSAGE
-========================================================= */
+/* Close */
 
-.gallery-more {
+.lightbox-close {
+    top: 25px;
+
+    right: 30px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+
+/* Previous */
+
+.lightbox-prev {
+    left: 25px;
+
+    top: 50%;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 20px;
+}
+
+
+/* Next */
+
+.lightbox-next {
+    right: 25px;
+
+    top: 50%;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 20px;
+}
+
+
+/* Button hover */
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: #ffc107;
+
+    color: #171717;
+}
+
+
+/* Keep vertical transform on arrow hover */
+
+.lightbox-prev:hover {
+    transform: translateY(-50%) scale(1.08);
+}
+
+
+.lightbox-next:hover {
+    transform: translateY(-50%) scale(1.08);
+}
+
+
+/* Caption */
+
+.lightbox-caption {
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 22px;
+
+    transform: translateX(-50%);
+
+    max-width: 80%;
+
+    padding: 8px 18px;
+
+    border-radius: 20px;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    color: #ffffff;
+
+    font-size: 13px;
+
     text-align: center;
 
-    margin-top: 50px;
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
 }
 
 
-.gallery-more p {
-    color: #777777;
+/* Prevent page scroll */
 
-    font-size: 14px;
-
-    margin-bottom: 18px;
+body.lightbox-open {
+    overflow: hidden;
 }
 
 
@@ -2776,82 +3102,191 @@ a {
 ========================================================= */
 
 .gallery-cta {
-    padding: 70px 0;
+    position: relative;
+
+    padding: 75px 0;
 
     background:
         linear-gradient(
             135deg,
-            #790016,
-            #c8102e
+            #790016 0%,
+            #c8102e 55%,
+            #8d001c 100%
         );
+
+    color: #ffffff;
 
     text-align: center;
 
-    color: #ffffff;
+    overflow: hidden;
 }
 
 
-.gallery-cta h2 {
-    font-family: "Playfair Display", serif;
+/* CTA decorative overlay */
 
-    font-size: 38px;
+.gallery-cta-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255, 193, 7, 0.08),
+            transparent 55%
+        );
+}
+
+
+/* CTA content */
+
+.gallery-cta-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* CTA small label */
+
+.gallery-cta-content > span {
+    display: block;
+
+    color: #ffc107;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
 
     margin-bottom: 12px;
 
-    color: #ffffff;
+    text-transform: uppercase;
 }
 
 
-.gallery-cta p {
+/* CTA heading */
+
+.gallery-cta-content h2 {
+    font-family: "Playfair Display", serif;
+
+    color: #ffffff;
+
+    font-size: 40px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin: 0 0 12px;
+}
+
+
+/* CTA paragraph */
+
+.gallery-cta-content p {
     max-width: 650px;
 
-    margin: 0 auto 25px;
+    margin: 0 auto 28px;
 
     color: rgba(255, 255, 255, 0.88);
 
     font-size: 14px;
+
+    line-height: 1.8;
 }
 
 
-.gallery-cta .btn-yellow {
+/* =========================================================
+   CTA BUTTONS
+========================================================= */
+
+.gallery-menu-btn,
+.gallery-contact-btn {
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 8px;
 
+    min-width: 165px;
+
+    padding: 12px 24px;
+
+    margin: 5px;
+
+    border-radius: 5px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Menu button */
+
+.gallery-menu-btn {
     background: #ffc107;
 
     color: #171717;
 
     border: 2px solid #ffc107;
-
-    padding: 12px 25px;
-
-    border-radius: 5px;
-
-    font-weight: 600;
-
-    transition: all 0.3s ease;
 }
 
 
-.gallery-cta .btn-yellow:hover {
+/* Menu hover */
+
+.gallery-menu-btn:hover {
     background: #e0a800;
 
     border-color: #e0a800;
+
+    color: #171717;
+
+    transform: translateY(-2px);
+}
+
+
+/* Contact button */
+
+.gallery-contact-btn {
+    background: transparent;
+
+    color: #ffffff;
+
+    border: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+
+/* Contact hover */
+
+.gallery-contact-btn:hover {
+    background: #ffffff;
+
+    border-color: #ffffff;
+
+    color: #c8102e;
 
     transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   GALLERY RESPONSIVE
+   TABLET
 ========================================================= */
-
-
-/* ---------- TABLET ---------- */
 
 @media (max-width: 991px) {
 
@@ -2865,16 +3300,26 @@ a {
     }
 
 
+    .gallery-intro {
+        padding: 60px 20px 40px;
+    }
+
+
     .gallery-section {
         padding: 45px 20px 70px;
     }
 
 
     .gallery-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
 
         gap: 20px;
+    }
+
+
+    .gallery-item.gallery-large,
+    .gallery-item.gallery-wide {
+        grid-column: span 2;
     }
 
 
@@ -2883,10 +3328,9 @@ a {
     }
 
 
-    .gallery-card.featured {
-        grid-column: span 2;
-
-        height: 350px;
+    .gallery-item.gallery-large .gallery-card,
+    .gallery-item.gallery-wide .gallery-card {
+        height: 330px;
     }
 
 
@@ -2895,13 +3339,20 @@ a {
     }
 
 
-    .gallery-cta h2 {
+    .gallery-cta {
+        padding: 65px 20px;
+    }
+
+
+    .gallery-cta-content h2 {
         font-size: 34px;
     }
 }
 
 
-/* ---------- MOBILE ---------- */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 767px) {
 
@@ -2930,23 +3381,35 @@ a {
     }
 
 
-    .gallery-section-description {
+    .gallery-intro-text {
         font-size: 14px;
     }
 
 
-    .gallery-filter-section {
-        padding: 5px 15px 25px;
-    }
-
-
-    .gallery-filters {
-        gap: 7px;
+    .gallery-section {
+        padding: 35px 15px 55px;
     }
 
 
     .gallery-filter {
-        padding: 9px 14px;
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding: 5px 2px 12px;
+
+        margin-bottom: 22px;
+
+        scrollbar-width: thin;
+    }
+
+
+    .gallery-filter-btn {
+        flex: 0 0 auto;
+
+        padding: 10px 15px;
 
         font-size: 12px;
     }
@@ -2959,39 +3422,42 @@ a {
     }
 
 
-    .gallery-card {
-        height: 260px;
-    }
-
-
-    .gallery-card.featured {
+    .gallery-item.gallery-large,
+    .gallery-item.gallery-wide {
         grid-column: span 1;
-
-        height: 300px;
     }
 
 
-    .gallery-card.featured .gallery-info h3 {
-        font-size: 24px;
+    .gallery-card,
+    .gallery-item.gallery-large .gallery-card,
+    .gallery-item.gallery-wide .gallery-card {
+        height: 270px;
     }
 
 
-    /* Always show a little information on mobile */
+    /* Always show overlay on mobile */
 
     .gallery-overlay {
         opacity: 1;
+
+        padding: 20px;
     }
 
 
-    .gallery-info {
+    .gallery-overlay-content {
         transform: translateY(0);
     }
 
 
-    .gallery-view-icon {
-        opacity: 1;
-
+    .gallery-overlay-content i {
         transform: scale(1);
+
+        opacity: 1;
+    }
+
+
+    .gallery-overlay-content h3 {
+        font-size: 20px;
     }
 
 
@@ -3000,13 +3466,77 @@ a {
     }
 
 
-    .gallery-cta h2 {
+    .gallery-cta-content h2 {
         font-size: 30px;
+    }
+
+
+    .gallery-cta-content p {
+        font-size: 13px;
+    }
+
+
+    .gallery-menu-btn,
+    .gallery-contact-btn {
+        width: 100%;
+
+        margin: 5px 0;
+    }
+
+
+    /* Lightbox */
+
+    .gallery-lightbox {
+        padding: 20px;
+    }
+
+
+    .gallery-lightbox img {
+        max-width: 94vw;
+
+        max-height: 75vh;
+    }
+
+
+    .lightbox-close {
+        top: 15px;
+
+        right: 15px;
+
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .lightbox-prev {
+        left: 12px;
+
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .lightbox-next {
+        right: 12px;
+
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .lightbox-caption {
+        bottom: 15px;
+
+        max-width: 70%;
+
+        font-size: 11px;
     }
 }
 
 
-/* ---------- SMALL MOBILE ---------- */
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
 @media (max-width: 480px) {
 
@@ -3015,8 +3545,13 @@ a {
     }
 
 
+    .gallery-hero-content {
+        padding: 50px 15px;
+    }
+
+
     .gallery-hero-label {
-        font-size: 11px;
+        font-size: 10px;
 
         letter-spacing: 2px;
     }
@@ -3024,6 +3559,11 @@ a {
 
     .gallery-hero h1 {
         font-size: 38px;
+    }
+
+
+    .gallery-hero p {
+        font-size: 13px;
     }
 
 
@@ -3043,51 +3583,55 @@ a {
 
 
     .gallery-section {
-        padding: 35px 15px 55px;
+        padding: 30px 12px 50px;
     }
 
 
-    .gallery-card {
+    .gallery-card,
+    .gallery-item.gallery-large .gallery-card,
+    .gallery-item.gallery-wide .gallery-card {
         height: 230px;
     }
 
 
-    .gallery-card.featured {
-        height: 270px;
-    }
-
-
     .gallery-overlay {
-        padding: 17px;
+        padding: 16px;
     }
 
 
-    .gallery-info h3 {
-        font-size: 20px;
-    }
-
-
-    .gallery-category {
-        top: 12px;
-        left: 12px;
-
+    .gallery-overlay-content span {
         font-size: 9px;
 
-        padding: 5px 9px;
+        letter-spacing: 1.5px;
     }
 
 
-    .gallery-view-icon {
-        top: 12px;
-        right: 12px;
+    .gallery-overlay-content h3 {
+        font-size: 18px;
 
+        padding-right: 42px;
+    }
+
+
+    .gallery-overlay-content i {
         width: 36px;
         height: 36px;
 
         font-size: 14px;
     }
-}
 
+
+    .gallery-cta-content h2 {
+        font-size: 27px;
+    }
+
+
+    .gallery-cta-content > span {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+}
 
 /* =========================================================
    29. CONTACT PAGE
