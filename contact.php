@@ -1,23 +1,110 @@
-<?php include 'includes/header.php'; ?>
+
+<?php
+
+require_once "config/db.php";
+
+$success = "";
+$error = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    $name = trim($_POST["name"] ?? "");
+    $email = trim($_POST["email"] ?? "");
+    $phone = trim($_POST["phone"] ?? "");
+    $subject = trim($_POST["subject"] ?? "");
+    $message = trim($_POST["message"] ?? "");
+
+    // Validation
+    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+
+        $error = "Please fill in all required fields.";
+
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
+        $error = "Please enter a valid email address.";
+
+    } elseif (strlen($name) > 100) {
+
+        $error = "Name is too long.";
+
+    } elseif (strlen($subject) > 200) {
+
+        $error = "Subject is too long.";
+
+    } else {
+
+        // Secure prepared statement
+        $sql = "INSERT INTO contact_messages
+                (name, email, phone, subject, message)
+                VALUES (?, ?, ?, ?, ?)";
+
+        $stmt = mysqli_prepare($conn, $sql);
+
+        if ($stmt) {
+
+            mysqli_stmt_bind_param(
+                $stmt,
+                "sssss",
+                $name,
+                $email,
+                $phone,
+                $subject,
+                $message
+            );
+
+            if (mysqli_stmt_execute($stmt)) {
+
+                $success = "Thank you! Your message has been sent successfully.";
+
+                // Clear form values after successful submission
+                $name = "";
+                $email = "";
+                $phone = "";
+                $subject = "";
+                $message = "";
+
+            } else {
+
+                $error = "Sorry, your message could not be sent. Please try again.";
+            }
+
+            mysqli_stmt_close($stmt);
+
+        } else {
+
+            $error = "Something went wrong. Please try again later.";
+        }
+    }
+}
+
+include 'includes/header.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="css/contact.css">
+
 </head>
 
 <body>
-
 
 
 <!-- ================= CONTACT HERO ================= -->
@@ -25,6 +112,7 @@
 <section class="contact-hero">
 
     <div class="hero-circle hero-circle-one"></div>
+
     <div class="hero-circle hero-circle-two"></div>
 
     <div class="contact-hero-content">
@@ -203,7 +291,29 @@
             </div>
 
 
-            <form action="#" method="POST">
+            <!-- SUCCESS MESSAGE -->
+
+            <?php if (!empty($success)): ?>
+
+                <div class="alert alert-success">
+                    <?php echo htmlspecialchars($success); ?>
+                </div>
+
+            <?php endif; ?>
+
+
+            <!-- ERROR MESSAGE -->
+
+            <?php if (!empty($error)): ?>
+
+                <div class="alert alert-danger">
+                    <?php echo htmlspecialchars($error); ?>
+                </div>
+
+            <?php endif; ?>
+
+
+            <form action="" method="POST">
 
 
                 <div class="form-row">
@@ -219,6 +329,8 @@
                             id="name"
                             name="name"
                             placeholder="Enter your name"
+                            value="<?php echo htmlspecialchars($name ?? ''); ?>"
+                            maxlength="100"
                             required
                         >
 
@@ -236,6 +348,8 @@
                             id="email"
                             name="email"
                             placeholder="Enter your email"
+                            value="<?php echo htmlspecialchars($email ?? ''); ?>"
+                            maxlength="150"
                             required
                         >
 
@@ -257,6 +371,8 @@
                             id="phone"
                             name="phone"
                             placeholder="Enter phone number"
+                            value="<?php echo htmlspecialchars($phone ?? ''); ?>"
+                            maxlength="30"
                         >
 
                     </div>
@@ -273,6 +389,8 @@
                             id="subject"
                             name="subject"
                             placeholder="Enter subject"
+                            value="<?php echo htmlspecialchars($subject ?? ''); ?>"
+                            maxlength="200"
                             required
                         >
 
@@ -293,7 +411,7 @@
                         placeholder="Write your message here..."
                         rows="6"
                         required
-                    ></textarea>
+                    ><?php echo htmlspecialchars($message ?? ''); ?></textarea>
 
                 </div>
 
@@ -348,8 +466,9 @@
 </section>
 
 
-
-
 </body>
+
 </html>
+
 <?php include 'includes/footer.php'; ?>
+```
