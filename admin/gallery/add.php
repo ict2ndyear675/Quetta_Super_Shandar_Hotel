@@ -1,3 +1,4 @@
+```php
 <?php
 
 session_start();
@@ -18,20 +19,20 @@ if (!isset($_SESSION['admin_id'])) {
 
 /*
 |--------------------------------------------------------------------------
-| ADD MENU ITEM
+| ADD GALLERY IMAGE
 |--------------------------------------------------------------------------
 */
 
-if (isset($_POST['add_menu'])) {
+if (isset($_POST['add_gallery'])) {
 
-    // Get form values
-    $name = trim($_POST['name']);
+    $title = trim($_POST['title']);
     $category = trim($_POST['category']);
     $description = trim($_POST['description']);
-    $price = trim($_POST['price']);
+
+    // Active = 1, Inactive = 0
     $status = isset($_POST['status']) ? 1 : 0;
 
-    $image_name = NULL;
+    $image_path = NULL;
 
 
     /*
@@ -40,13 +41,9 @@ if (isset($_POST['add_menu'])) {
     |--------------------------------------------------------------------------
     */
 
-    if ($name == "" || $category == "" || $price == "") {
+    if ($title === "" || $category === "") {
 
         $error = "Please fill in all required fields.";
-
-    } elseif (!is_numeric($price)) {
-
-        $error = "Please enter a valid price.";
 
     } else {
 
@@ -57,45 +54,92 @@ if (isset($_POST['add_menu'])) {
         |--------------------------------------------------------------------------
         */
 
-        if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
+        if (
+            !isset($_FILES['image']) ||
+            $_FILES['image']['error'] !== UPLOAD_ERR_OK
+        ) {
+
+            $error = "Please select a gallery image.";
+
+        } else {
 
             $image = $_FILES['image'];
 
-            $allowed_extensions = ['jpg', 'jpeg', 'png', 'webp'];
+            $allowed_extensions = [
+                "jpg",
+                "jpeg",
+                "png",
+                "webp"
+            ];
 
-            $file_extension = strtolower(
+            $extension = strtolower(
                 pathinfo($image['name'], PATHINFO_EXTENSION)
             );
 
 
-            if (!in_array($file_extension, $allowed_extensions)) {
+            /*
+            | Check extension
+            */
+
+            if (!in_array($extension, $allowed_extensions, true)) {
 
                 $error = "Only JPG, JPEG, PNG and WEBP images are allowed.";
 
-            } elseif ($image['size'] > 5 * 1024 * 1024) {
+            }
+
+
+            /*
+            | Check file size
+            */
+
+            elseif ($image['size'] > 5 * 1024 * 1024) {
 
                 $error = "Image size must be less than 5MB.";
 
             } else {
 
+
                 /*
-                | Create unique filename
+                |--------------------------------------------------------------------------
+                | UPLOAD DIRECTORY
+                |--------------------------------------------------------------------------
                 */
 
-                $image_name =
+                $upload_folder = "../../images/gallery/";
+
+
+                /*
+                | Create folder if it does not exist
+                */
+
+                if (!is_dir($upload_folder)) {
+
+                    mkdir($upload_folder, 0777, true);
+
+                }
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | CREATE UNIQUE FILE NAME
+                |--------------------------------------------------------------------------
+                */
+
+                $new_name =
                     time() . "_" .
                     uniqid() . "." .
-                    $file_extension;
+                    $extension;
+
+
+                $upload_path =
+                    $upload_folder . $new_name;
 
 
                 /*
-                | Upload destination
+                |--------------------------------------------------------------------------
+                | MOVE IMAGE
+                |--------------------------------------------------------------------------
                 */
-
-               $upload_folder = "../../images/menu/";
-
-$upload_path = $upload_folder . $image_name;
-
 
                 if (!move_uploaded_file(
                     $image['tmp_name'],
@@ -103,6 +147,15 @@ $upload_path = $upload_folder . $image_name;
                 )) {
 
                     $error = "Failed to upload image.";
+
+                } else {
+
+                    /*
+                    | Store relative path in database
+                    */
+
+                    $image_path =
+                        "images/gallery/" . $new_name;
 
                 }
 
@@ -119,37 +172,47 @@ $upload_path = $upload_folder . $image_name;
 
         if (!isset($error)) {
 
-            $sql = "INSERT INTO menu_items
-                    (name, category, description, price, image, status)
-                    VALUES (?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO gallery
+                    (title, category, image, description, status)
+                    VALUES (?, ?, ?, ?, ?)";
 
             $stmt = mysqli_prepare($conn, $sql);
 
-            mysqli_stmt_bind_param(
-                $stmt,
-                "sssdsi",
-                $name,
-                $category,
-                $description,
-                $price,
-                $image_name,
-                $status
-            );
-
-
-            if (mysqli_stmt_execute($stmt)) {
-
-                header("Location: index.php?success=added");
-
-                exit;
-
-            } else {
+            if (!$stmt) {
 
                 $error = "Database error: " . mysqli_error($conn);
 
-            }
+            } else {
 
-            mysqli_stmt_close($stmt);
+                mysqli_stmt_bind_param(
+                    $stmt,
+                    "ssssi",
+                    $title,
+                    $category,
+                    $image_path,
+                    $description,
+                    $status
+                );
+
+
+                if (mysqli_stmt_execute($stmt)) {
+
+                    mysqli_stmt_close($stmt);
+
+                    header("Location: index.php?success=added");
+                    exit;
+
+                } else {
+
+                    $error =
+                        "Database error: " .
+                        mysqli_error($conn);
+
+                    mysqli_stmt_close($stmt);
+
+                }
+
+            }
 
         }
 
@@ -158,7 +221,6 @@ $upload_path = $upload_folder . $image_name;
 }
 
 ?>
-
 
 <!DOCTYPE html>
 
@@ -174,7 +236,7 @@ $upload_path = $upload_folder . $image_name;
     >
 
     <title>
-        Add Menu Item | Quetta Super Shandar Hotel
+        Add Gallery Image | Quetta Super Shandar Hotel
     </title>
 
 
@@ -260,7 +322,7 @@ $upload_path = $upload_folder . $image_name;
         }
 
 
-        /* FORM LABEL */
+        /* LABEL */
 
         .form-label {
 
@@ -303,17 +365,6 @@ $upload_path = $upload_folder . $image_name;
         }
 
 
-        /* TEXTAREA */
-
-        textarea.form-control {
-
-            min-height: 120px;
-
-            resize: vertical;
-
-        }
-
-
         /* IMAGE UPLOAD */
 
         .image-upload {
@@ -327,8 +378,6 @@ $upload_path = $upload_folder . $image_name;
             text-align: center;
 
             background: #fafafa;
-
-            transition: .3s;
 
         }
 
@@ -356,6 +405,21 @@ $upload_path = $upload_folder . $image_name;
             margin: 8px 0 12px;
 
             color: #777;
+
+        }
+
+
+        /* STATUS */
+
+        .status-box {
+
+            background: #fff8df;
+
+            border: 1px solid #f5d875;
+
+            border-radius: 8px;
+
+            padding: 15px;
 
         }
 
@@ -411,22 +475,6 @@ $upload_path = $upload_folder . $image_name;
 
         }
 
-
-        /* STATUS */
-
-        .status-box {
-
-            background: #fff8df;
-
-            border: 1px solid #f5d875;
-
-            border-radius: 8px;
-
-            padding: 15px;
-
-        }
-
-
     </style>
 
 </head>
@@ -448,15 +496,15 @@ $upload_path = $upload_folder . $image_name;
 
                 <h2>
 
-                    <i class="bi bi-plus-circle"></i>
+                    <i class="bi bi-images"></i>
 
-                    Add Menu Item
+                    Add Gallery Image
 
                 </h2>
 
                 <p>
 
-                    Add a new food or beverage item to the hotel menu.
+                    Add a new image to the hotel gallery.
 
                 </p>
 
@@ -470,14 +518,13 @@ $upload_path = $upload_folder . $image_name;
 
                 <i class="bi bi-arrow-left"></i>
 
-                Back to Menu
+                Back to Gallery
 
             </a>
 
         </div>
 
     </div>
-
 
 
     <!-- ERROR MESSAGE -->
@@ -495,7 +542,6 @@ $upload_path = $upload_folder . $image_name;
     <?php endif; ?>
 
 
-
     <!-- FORM -->
 
     <div class="form-card">
@@ -505,17 +551,16 @@ $upload_path = $upload_folder . $image_name;
             enctype="multipart/form-data"
         >
 
-
             <div class="row g-4">
 
 
-                <!-- NAME -->
+                <!-- TITLE -->
 
                 <div class="col-md-6">
 
                     <label class="form-label">
 
-                        Menu Item Name
+                        Gallery Title
 
                         <span class="required">*</span>
 
@@ -523,15 +568,14 @@ $upload_path = $upload_folder . $image_name;
 
                     <input
                         type="text"
-                        name="name"
+                        name="title"
                         class="form-control"
-                        placeholder="e.g. Mutton Karahi"
+                        placeholder="e.g. Hotel Dining Area"
                         maxlength="100"
                         required
                     >
 
                 </div>
-
 
 
                 <!-- CATEGORY -->
@@ -556,28 +600,28 @@ $upload_path = $upload_folder . $image_name;
                             Select Category
                         </option>
 
-                        <option value="Traditional Food">
-                            Traditional Food
+                        <option value="Hotel">
+                            Hotel
                         </option>
 
-                        <option value="Chai & Kahwa">
-                            Chai & Kahwa
+                        <option value="Restaurant">
+                            Restaurant
                         </option>
 
-                        <option value="Breakfast">
-                            Breakfast
+                        <option value="Food">
+                            Food
                         </option>
 
-                        <option value="Paratha">
-                            Paratha
+                        <option value="Interior">
+                            Interior
                         </option>
 
-                        <option value="Salan">
-                            Salan
+                        <option value="Exterior">
+                            Exterior
                         </option>
 
-                        <option value="Rice">
-                            Rice
+                        <option value="Events">
+                            Events
                         </option>
 
                         <option value="Other">
@@ -587,7 +631,6 @@ $upload_path = $upload_folder . $image_name;
                     </select>
 
                 </div>
-
 
 
                 <!-- DESCRIPTION -->
@@ -603,45 +646,11 @@ $upload_path = $upload_folder . $image_name;
                     <textarea
                         name="description"
                         class="form-control"
-                        placeholder="Enter a short description of the menu item..."
+                        rows="4"
+                        placeholder="Enter a short description of this gallery image..."
                     ></textarea>
 
                 </div>
-
-
-
-                <!-- PRICE -->
-
-                <div class="col-md-6">
-
-                    <label class="form-label">
-
-                        Price (Rs.)
-
-                        <span class="required">*</span>
-
-                    </label>
-
-                    <div class="input-group">
-
-                        <span class="input-group-text">
-                            Rs.
-                        </span>
-
-                        <input
-                            type="number"
-                            name="price"
-                            class="form-control"
-                            placeholder="850.00"
-                            step="0.01"
-                            min="0"
-                            required
-                        >
-
-                    </div>
-
-                </div>
-
 
 
                 <!-- STATUS -->
@@ -677,7 +686,7 @@ $upload_path = $upload_folder . $image_name;
 
                                 <small class="text-muted">
 
-                                    Show this item on the public menu.
+                                    Show this image on the public gallery.
 
                                 </small>
 
@@ -690,14 +699,15 @@ $upload_path = $upload_folder . $image_name;
                 </div>
 
 
-
                 <!-- IMAGE -->
 
                 <div class="col-12">
 
                     <label class="form-label">
 
-                        Menu Item Image
+                        Gallery Image
+
+                        <span class="required">*</span>
 
                     </label>
 
@@ -706,7 +716,9 @@ $upload_path = $upload_folder . $image_name;
                         <i class="bi bi-cloud-arrow-up"></i>
 
                         <p>
-                            Upload an image for this menu item
+
+                            Upload an image for the gallery
+
                         </p>
 
                         <input
@@ -714,6 +726,7 @@ $upload_path = $upload_folder . $image_name;
                             name="image"
                             class="form-control"
                             accept=".jpg,.jpeg,.png,.webp"
+                            required
                         >
 
                         <small class="text-muted">
@@ -725,7 +738,6 @@ $upload_path = $upload_folder . $image_name;
                     </div>
 
                 </div>
-
 
 
                 <!-- BUTTONS -->
@@ -748,20 +760,19 @@ $upload_path = $upload_folder . $image_name;
 
                         <button
                             type="submit"
-                            name="add_menu"
+                            name="add_gallery"
                             class="btn btn-save"
                         >
 
                             <i class="bi bi-check-circle"></i>
 
-                            Add Menu Item
+                            Add Gallery Image
 
                         </button>
 
                     </div>
 
                 </div>
-
 
             </div>
 
@@ -780,3 +791,4 @@ $upload_path = $upload_folder . $image_name;
 </body>
 
 </html>
+

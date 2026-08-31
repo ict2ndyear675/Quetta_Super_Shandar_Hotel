@@ -1,5 +1,34 @@
 
-<?php include 'includes/header.php'; ?>
+<?php
+
+require_once "config/db.php";
+
+include 'includes/header.php';
+
+
+/*
+|--------------------------------------------------------------------------
+| GET ACTIVE MENU ITEMS
+|--------------------------------------------------------------------------
+*/
+$sql = "SELECT * FROM menu_items WHERE status = 1 ORDER BY category, id DESC";
+
+
+$result = mysqli_query($conn, $sql);
+
+$menu_items = [];
+
+if ($result) {
+
+    while ($row = mysqli_fetch_assoc($result)) {
+
+        $menu_items[] = $row;
+
+    }
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -280,298 +309,64 @@
 
         <div class="row g-4">
 
+<?php foreach ($menu_items as $item): ?>
 
-            <!-- ==========================================
-                 SPECIAL CHAI
-            =========================================== -->
+    <?php
+    if (
+        $item['category'] !== 'Chai & Kahwa' &&
+        $item['category'] !== 'Chai & Coffee'
+    ) {
+        continue;
+    }
 
-            <div class="col-lg-4 col-md-6">
+    $image = !empty($item['image'])
+    ? $item['image']
+    : 'images/no-image.jpg';
 
-                <div class="food-card">
+$image = str_replace('../', '', $image);
+    ?>
 
-                    <div class="food-image">
+    <div class="col-lg-4 col-md-6">
 
-                        <img
-                            src="images\special-chai.webp"
-                            alt="Special Chai"
-                        >
+        <div class="food-card">
 
-                        <span class="popular-badge">
-                            Popular
-                        </span>
+            <div class="food-image">
 
-                    </div>
-
-
-                    <div class="food-content">
-
-                        <div class="food-title-price">
-
-                            <h3>
-                                Special Chai
-                            </h3>
-
-                            <span class="price">
-                                Rs. 170
-                            </span>
-
-                        </div>
-
-
-                        <p>
-                            A rich and aromatic traditional chai
-                            prepared fresh with carefully selected
-                            tea and spices.
-                        </p>
-
-                    </div>
-
-                </div>
+                <img
+                    src="<?php echo htmlspecialchars($image); ?>"
+                    alt="<?php echo htmlspecialchars($item['name']); ?>"
+                >
 
             </div>
 
+            <div class="food-content">
 
+                <div class="food-title-price">
 
-            <!-- ==========================================
-                 SPECIAL MALAI WALI CHAI
-            =========================================== -->
+                    <h3>
+                        <?php echo htmlspecialchars($item['name']); ?>
+                    </h3>
 
-            <div class="col-lg-4 col-md-6">
-
-                <div class="food-card">
-
-                    <div class="food-image">
-
-                        <img
-                            src="images/special-mlahi-wala-chai.webp"
-                            alt="Special Malai Wali Chai"
-                        >
-
-                        <span class="popular-badge">
-                            Special
-                        </span>
-
-                    </div>
-
-
-                    <div class="food-content">
-
-                        <div class="food-title-price">
-
-                            <h3>
-                                Special Malai Wali Chai
-                            </h3>
-
-                            <span class="price">
-                                Rs. 180
-                            </span>
-
-                        </div>
-
-
-                        <p>
-                            Creamy and flavorful chai with a rich
-                            malai finish, perfect for tea lovers.
-                        </p>
-
-                    </div>
+                    <span class="price">
+                        Rs. <?php echo number_format($item['price'], 0); ?>
+                    </span>
 
                 </div>
 
-            </div>
-
-
-
-            <!-- ==========================================
-                 GUR WALI CHAI
-            =========================================== -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="food-card">
-
-                    <div class="food-image">
-
-                        <img
-                            src="images/special-gurhwali-chai.webp"
-                            alt="Special Gur Wali Chai"
-                        >
-
-                    </div>
-
-
-                    <div class="food-content">
-
-                        <div class="food-title-price">
-
-                            <h3>
-                                Special Gur Wali Chai
-                            </h3>
-
-                            <span class="price">
-                                Rs. 180
-                            </span>
-
-                        </div>
-
-
-                        <p>
-                            Traditional chai naturally sweetened
-                            with gur for a warm and delicious taste.
-                        </p>
-
-                    </div>
-
-                </div>
+                <p>
+                    <?php echo htmlspecialchars($item['description']); ?>
+                </p>
 
             </div>
-
-
-
-            <!-- ==========================================
-                 SULEMANI KAHWA
-            =========================================== -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="food-card">
-
-                    <div class="food-image">
-
-                        <img
-                            src="images/sulemani-kawa.webp"
-                            alt="Sulemani Kahwa"
-                        >
-
-                    </div>
-
-
-                    <div class="food-content">
-
-                        <div class="food-title-price">
-
-                            <h3>
-                                Sulemani Kahwa
-                            </h3>
-
-                            <span class="price">
-                                Rs. 120
-                            </span>
-
-                        </div>
-
-
-                        <p>
-                            A light and refreshing traditional
-                            kahwa prepared with aromatic spices.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- ==========================================
-                 DOODH KAHWA
-            =========================================== -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="food-card">
-
-                    <div class="food-image">
-
-                        <img
-                            src="images/dhod-kawa.webp"
-                            alt="Doodh Kahwa"
-                        >
-
-                    </div>
-
-
-                    <div class="food-content">
-
-                        <div class="food-title-price">
-
-                            <h3>
-                                Doodh Kahwa
-                            </h3>
-
-                            <span class="price">
-                                Rs. 160
-                            </span>
-
-                        </div>
-
-
-                        <p>
-                            Warm milk-based kahwa with a pleasant
-                            blend of traditional spices.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- ==========================================
-                 GREEN TEA
-            =========================================== -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="food-card">
-
-                    <div class="food-image">
-
-                        <img
-                            src="images/green-tea.webp"
-                            alt="Green Tea"
-                        >
-
-                    </div>
-
-
-                    <div class="food-content">
-
-                        <div class="food-title-price">
-
-                            <h3>
-                                Green Tea
-                            </h3>
-
-                            <span class="price">
-                                Rs. 120
-                            </span>
-
-                        </div>
-
-
-                        <p>
-                            A refreshing hot green tea prepared
-                            with aromatic herbs and spices.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
 
         </div>
 
     </div>
 
-</section>
+<?php endforeach; ?>
+</div>
 
-
+    
 
 <!-- =====================================================
      2. PARATHA

@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $category = trim($_POST['category']);
     $description = trim($_POST['description']);
     $price = trim($_POST['price']);
-    $status = $_POST['status'];
+  $status = isset($_POST['status']) ? (int) $_POST['status'] : 0;
 
     /* Keep old image by default */
     $image = $item['image'];
@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     }
                 }
 
-                $image = "../images/menu/" . $new_name;
+                $image = "images/menu/" . $new_name;
             }
         }
     }
@@ -508,23 +508,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         Status
                     </label>
 
-                    <select
-                        name="status"
-                        class="form-select"
-                        required
-                    >
+              <select 
+    name="status" 
+    class="form-select" 
+    required
+>
 
-                        <option value="active"
-                            <?php if ($item['status'] === 'active') echo 'selected'; ?>>
-                            Active
-                        </option>
+    <option value="1" 
+        <?php if ((int)$item['status'] === 1) echo 'selected'; ?>>
+        Active
+    </option>
 
-                        <option value="inactive"
-                            <?php if ($item['status'] === 'inactive') echo 'selected'; ?>>
-                            Inactive
-                        </option>
+    <option value="0" 
+        <?php if ((int)$item['status'] === 0) echo 'selected'; ?>>
+        Inactive
+    </option>
 
-                    </select>
+</select>
 
                 </div>
 
